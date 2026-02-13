@@ -5,6 +5,8 @@ title = 'Recommendation Systems'
 tags = ["ml", "math"]
 categories = []
 description = "Notes on collaborative and content based recommendation systems"
+katex = true
+math = true
 +++
 
 There are three core algorithms behind recommendation systems:
