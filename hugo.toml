@@ -43,7 +43,9 @@ theme = "minimal-black"
     #   sizes = "192x192"
     #   type = "image/png"
     #   purpose = "any maskable"
-
+  katex = true
+  [params.math]
+    katex = true
   # Theme Configuration
   [params.theme]
     defaultTheme = "dark"  # Options: "light", "dark", "system"
