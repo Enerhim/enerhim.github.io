@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html lang="en" data-cb-collapse-enabled=""
+  data-cb-collapse-default=""
+  data-cb-collapse-lines=""
+  data-cb-collapse-auto-height=""
+  data-cb-collapse-collapsed-height="">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Recommendation Systems | Himanshu Sharma&#39;s Blog</title>
+
+<meta name="description" content="Notes on collaborative and content based recommendation systems" />
+
+
+
+
+  <link rel="icon" type="image/x-icon" href="/images/profile.jpg" />
+
+
+
+
+  <link rel="apple-touch-icon" href="/mnt/data/Programming/WebDev/blog/content/blog/recommendation-systems.md" />
+
+
+
+
+  
+    
+  
+    
+  
+    
+  
+    
+      <link rel="manifest" href="http://localhost:1313/manifest.webmanifest" />
+    
+  
+
+
+<link rel="stylesheet" href="/css/main.css"> 
+
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+  >
+
+
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/devicon.min.css"
+  >
+
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+/>
+
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/justified-gallery@3.8.2/dist/css/justifiedGallery.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({ theme: "dark" });
+</script>
+
+<script>
+  (function () {
+    try {
+      var stored = localStorage.getItem("theme");
+      var systemDark =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+      var defaultTheme =
+        'dark';
+
+      var theme =
+        stored ||
+        (defaultTheme === "dark"
+          ? "dark"
+          : defaultTheme === "light"
+          ? "light"
+          : systemDark
+          ? "dark"
+          : "light");
+
+      document.documentElement.setAttribute("data-theme", theme);
+    } catch (e) {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  })();
+</script>
+
+
+
+
+</head>
+
+<body class="min-h-screen bg-bg text-text antialiased">
+  <div class="flex min-h-screen flex-col">
+    <header class="pt-6">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    
+    <div class="nav-shell">
+      <div class="nav-inner">
+        
+        <a href="/" class="flex items-center gap-2">
+          
+            <div class="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-surface">
+              <img
+                src="/images/profile.jpg"
+                alt=" "
+                class="h-full w-full object-cover"
+              >
+            </div>
+          
+          <span class="text-xs font-semibold tracking-wide">
+             
+          </span>
+        </a>
+
+        <div class="flex items-center gap-2">
+          
+          <nav class="hidden items-center gap-5 md:flex">
+              <a
+                href="/"
+                class="nav-link link-underline flex items-center gap-1 "
+              >
+                
+                  <i class="fa-solid fa-house text-[0.75rem]"></i>
+                
+                <span>Home</span>
+              </a>
+              <a
+                href="/projects/"
+                class="nav-link link-underline flex items-center gap-1 "
+              >
+                
+                  <i class="fa-regular fa-folder-open text-[0.75rem]"></i>
+                
+                <span>Projects</span>
+              </a>
+              <a
+                href="/blog/"
+                class="nav-link link-underline flex items-center gap-1 "
+              >
+                
+                  <i class="fa-regular fa-note-sticky text-[0.75rem]"></i>
+                
+                <span>Blog</span>
+              </a>
+          </nav>
+
+          
+          <button
+  type="button"
+  class="theme-toggle"
+  aria-label="Toggle dark mode"
+  data-theme-toggle
+>
+  <span data-theme-icon-light style="display: none">
+    
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-4 w-4"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <circle cx="12" cy="12" r="4" />
+      <path
+        d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364-1.414 1.414M8.05 15.95l-1.414 1.414m0-11.314L8.05 8.05m9.9 9.9-1.414-1.414"
+      />
+    </svg>
+  </span>
+
+  <span data-theme-icon-dark>
+    
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-4 w-4"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M21 12.79A9 9 0 0 1 12.21 3 7 7 0 1 0 21 12.79z" />
+    </svg>
+  </span>
+</button>
+
+
+          
+          <button
+            type="button"
+            class="ml-1 inline-flex items-center justify-center rounded-full border border-border bg-bg p-2 text-muted shadow-sm hover:text-accent md:hidden"
+            aria-label="Toggle navigation"
+            data-mobile-nav-toggle
+          >
+            <span class="sr-only">Open navigation</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="18" x2="20" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="mx-auto mt-2 max-w-7xl px-4 sm:px-6 md:hidden">
+    <nav
+      class="hidden rounded-2xl border border-border bg-surface px-4 py-3 text-sm text-muted shadow-md"
+      data-mobile-nav
+    >
+      
+        <a href="/" class="flex items-center gap-2 py-1.5">
+          
+            <i class="fa-solid fa-house text-[0.8rem]"></i>
+          
+          <span>Home</span>
+        </a>
+      
+        <a href="/projects/" class="flex items-center gap-2 py-1.5">
+          
+            <i class="fa-regular fa-folder-open text-[0.8rem]"></i>
+          
+          <span>Projects</span>
+        </a>
+      
+        <a href="/blog/" class="flex items-center gap-2 py-1.5">
+          
+            <i class="fa-regular fa-note-sticky text-[0.8rem]"></i>
+          
+          <span>Blog</span>
+        </a>
+      
+    </nav>
+  </div>
+</header>
+
+
+    <main class="flex-1">
+      
+  <section class="layout-page section-stack">
+    <div class="article-layout">
+      <article class="article-main space-y-4">
+        <header class="space-y-2">
+          <h1 class="heading-page text-2xl sm:text-3xl">Recommendation Systems</h1>
+
+          <div class="text-[0.75rem] text-muted">
+            
+              <span>12 Feb 2026</span>
+            
+            
+              <span> • 13 min read</span>
+            
+          </div>
+
+          
+            <p class="max-w-xl text-sm text-muted">
+              Notes on collaborative and content based recommendation systems
+            </p>
+          
+        </header>
+
+        <div class="card card-pad">
+          <div class="markdown-body">
+            <p>There are three core algorithms behind recommendation systems:</p>
+<ol>
+<li>Collaborative Filtering</li>
+<li>Content-Based Filtering</li>
+<li>Hybrid Approach Filtering</li>
+</ol>
+<hr>
+<h2 id="collaborative-filtering">
+  <a href="#collaborative-filtering" class="md-heading-anchor">
+    Collaborative Filtering
+  </a>
+</h2>
+<p>Collaborative filtering algorithm attempts to predict what a user will like based on the patterns from other users, hence the name. It does not factor in the item content.</p>
+<p>The advantage of collaborative filtering is that it can find more hidden patterns.</p>
+<div class="md-alert md-alert-note">
+  <em>Why does collaborative filtering able to find hidden patterns better?</em>
+Collaborative filtering works better because of <strong>co-occurrence</strong>. (Co-occurrence is basically two events occurring more when together) This allows for subconscious patterns and nuances to be recognized by the model that typical genres and classes cannot analyze.
+</div>
+
+<p>Even within collaborative filtering we have more approaches.</p>
+<p>All methods start with the same object -
+</p>
+$$ R \in \mathbb{R}^{n_\text{user} \times n_\text{items}} $$<p> and the goal is to be able to fill in the gaps in this table, ei estimate how much a user likes the given item and consequently also recommend it.</p>
+<h3 id="user-based">
+  <a href="#user-based" class="md-heading-anchor">
+    <strong>User-based</strong>
+  </a>
+</h3>
+<p>The idea for user based collaborative filtering is to find <strong>what other users like and recommend based on that</strong>.</p>
+<ol>
+<li>
+<p>Represent each user as a vector of item interactions such that $\bold{r_u} = {r_{u1}, \dots, r_{uM}}$</p>
+<p>[Imagine a vector space where similar users are closer together]</p>
+</li>
+<li>
+<p>Compute similarity between users by methods such as cosine similarity or Pearson correlation.</p>
+<p>→ Cosine Similarity (Measures angle, not amplitude)</p>
+$$
+    \text{sim}(u,v) = \frac{\bold{r}_u \cdot \bold{r}_v
+    }{||\bold{r}_u||||\bold{r}_v||}
+    $$<p>→ Pearson Similarity returns values between 0 and 1(adjusts for users that rate harshly or generously and also compares relative preferences)</p>
+$$
+    \text{sim}(u,v) = \frac{{}\sum_{i \in I_{uv}} (r_{ui} - \overline{r}_u)(r_{vi} - \overline{r_v})}
+    {\sqrt{\sum_{i \in I_{uv}} (r_{ui} - \overline{r}_u)^2  \sum_{i \in I_{uv}} (r_{vi} - \overline{r}_v)^2}}
+    $$<p>Where $I_{uv}$ = set of items that both users like</p>
+<p>$r_{ui}$ = rating by user $u$ to item $i$</p>
+<p>$r_{vi}$ = rating by user $v$ to item $i$</p>
+<p>$\overline{r}_{u}$ = average ratings of user $u$ across all items</p>
+<p>$\overline{r}_{v}$ = average ratings of user $v$ across all items</p>
+<p><em>Explanation for Pearson Correlation:</em></p>
+<p>Consider the numerator: $\sum_{i \in I_{uv}} (r_{ui} - \overline{r}_u)(r_{vi} - \overline{r_v})$. Subtracting the means gives us the outliers. If the outliers are in similar directions, we will get a net positive (ei both users like/dislike the same things). Negative output means that they have opposite likings</p>
+<p>Now consider the denominator: $\sqrt{\sum_{i \in I_{uv}} (r_{ui} - \overline{r}_u)^2  \sum_{i \in I_{uv}} (r_{vi} - \overline{r}_v)^2}$. Each term is like a standard deviation. This mainly normalizes the score to stay between 0 and 1</p>
+</li>
+<li>
+<p>For a target user $u$, find top-$K$ users based on the above similarity</p>
+<p>[Let this set of top $v$ users be $N(u)$ which could find through k-NN or something]</p>
+</li>
+<li>
+<p>We predict the rating for an item $i$ for user $u$ based on the ratings of all top $K$ similar users $v$</p>
+$$
+    \hat r_{ui}
+     = \frac{\sum_{v\in N(u)} \text{sim}(u,v) r_{vi}}{\sum_{v \in N(u)}|\text{sim}(u,v)|}
+    $$</li>
+</ol>
+<p>There are a few disadvantages to this approach though; it is slow to start for new users, slow at scale since users grow fast.</p>
+<h3 id="item-based">
+  <a href="#item-based" class="md-heading-anchor">
+    <strong>Item-based</strong>
+  </a>
+</h3>
+<p>This basically works the same way, here we <strong>recommend items similar to what items you already like</strong></p>
+<ol>
+<li>
+<p>Treat each item as a vector of users $\bold{v}_i = (r_{1i},\dots)$ where the length is the number of items the user has already rated</p>
+</li>
+<li>
+<p>Compute item-item similarity using cosine or Pearson method (as above)</p>
+<p>→ Cosine similarity</p>
+$$
+    \text{sim}(u,v) = \frac{\bold{v}_i \cdot \bold{v}_j
+    }{||\bold{v}_i||||\bold{v}_j||}
+    $$<p>→ Pearson similarity</p>
+<p>Where $U_{ij}$ = set of users that have rated both item $i$ and $j$</p>
+<p>$r_{ui}$ = rating by user $u$ to item $i$</p>
+<p>$r_{uj}$ = rating by user $u$ to item $j$</p>
+<p>$\overline{r}_{i}$ = average ratings of item $i$ across all users</p>
+<p>$\overline{r}_{j}$ = average ratings of item $j$ across all users</p>
+$$
+    \text{sim}(i,j) = \frac{{}\sum_{u \in U_{ij}} (r_{ui} - \overline{r}_i)(r_{uj} - \overline{r_j})}
+    {\sqrt{\sum_{u \in U_{ij}} (r_{ui} - \overline{r}_i)^2  \sum_{u \in U_{ij}} (r_{uj} - \overline{r}_j)^2}}
+    $$</li>
+<li>
+<p>For user $u$ predict</p>
+$$
+    \hat r_{ui}
+     = \frac{\sum_{j\in I(u)} \text{sim}(i,j) r_{uj}}{\sum_{j \in I(u)}|\text{sim}(i,j)|}
+    $$</li>
+</ol>
+<h3 id="matrix-factorization-decomposition">
+  <a href="#matrix-factorization-decomposition" class="md-heading-anchor">
+    <strong>Matrix Factorization (Decomposition)</strong>
+  </a>
+</h3>
+<p>Matrix factorization (or decomposition) is the more modern method of collaborative filtering.</p>
+<p>We estimate $R$ as a low rank product: $R \approx UV^T$ where $U \in \mathbb{R}^{n_u \times k}$ and $V \in \mathbb{R}^{n_i \times k}$</p>
+<p>[Here, $k$ = the latent dimension,</p>
+<p>Row $U_u$ = latent vector for user $u$</p>
+<p>Row $V_i$ = latent vector for item $i$</p>
+<p>Each row is a point in $\mathbb{R}^k$]</p>
+<div class="md-alert md-alert-note">
+  <p>What are latent dimensions?</p>
+<p>Latent dimensions are abstract concepts that the model extracts from the user-item interaction matrix. For example, “liking romance”, “liking slow pacing”, etc</p>
+<p>Remember, this is not labeled data, these are emergent co-occurring patterns.</p>
+<p>The user latent vector encodes the preferences of the user while the item latent vector encodes the attributes/traits of the items.</p>
+
+</div>
+
+<p>For a user $u$ and item $i$, the prediction equation is  a dot product</p>
+$$
+\hat r_{u,i} = U_u \cdot V_i 
+$$<p>If the user preferences align with item attributes, we get a large score otherwise we get a low score.</p>
+<p>The goal here, is to learn the latent vectors whose dot product approximates the ratings. There are a few algorithms that allow doing so - such as <strong>SVD</strong> (singular value decomposition), <strong>SVD</strong>++, Non Negative Matrix Factorization (<strong>NMF</strong>), Alternating Least Squares (<strong>ALS</strong>), SGD</p>
+<div class="md-alert md-alert-note">
+  <p>Matrix factorization also helps reduce the used up space, you can see how matrices can be used to optimize storage utilization.</p>
+<img width="1600" height="900" alt="image" src="image.png" />
+<img width="1600" height="900" alt="image" src="image 1.png" />
+<p>The above graph is a representation of the block diagram above</p>
+
+</div>
+
+<p>Initially since we have no idea of what each user likes, we start with random latent vectors.</p>
+<p>Let $\Omega = \{(u,i): R_{u,i} \text{ is observed}\}$ [Basically, $\Omega$ is the set of user-item interactions that have happened.]</p>
+<p>Now for Gradient Descent, we define the cost function:</p>
+$$
+J(U,V) = \sum_{u,i \in \Omega} (R_{u,i} - U_u \cdot V_i)^2 + \lambda(\sum_u ||U_u||^2 + ||V_i||^2)
+$$<p>Where the first term is very close to linear regression and the second term is the regularization term. $\lambda$ is the regularization factor. For all pairs $(u,i)$, we train</p>
+$$
+U_u -= \alpha \frac{\partial J}{\partial U_u} \\
+Vi -= \alpha \frac{\partial J}{\partial V_i}
+$$<p>where, the gradient is as follows</p>
+$$
+\frac{\partial J}{\partial U_u}  = -2(R_{u,i} - U_u \cdot V_i)
+V_i + 2\lambda U_u = \frac{\partial J}{\partial U_u}  = -(R_{u,i} - U_u \cdot V_i)
+V_i + \lambda U_u \\
+\frac{\partial J}{\partial V_i}  = -(R_{u,i} - U_u \cdot V_i)
+V_i + \lambda U_u
+$$<p>The matrix factorization approach is very good at capturing co-occurrence, scaling to millions of users and items, and can win against noisy and sparse data. It still has problems of cold start and assumes linear interactions. However, this can be extended using neural networks to extend beyond.</p>
+<p>[How??]</p>
+<div class="md-alert md-alert-note">
+  <p>Why is matrix factorization fast and scalable?</p>
+<p>You update one user vector and one item vector for each rating making cost $O(k)$</p>
+
+</div>
+
+<p><strong>Geometric Intuition</strong></p>
+<p>Users and items like in the same latent space $\mathbb{R}^k$ where $k$ is the dimension of latent space. Recommendation is computing the nearest item vectors in the same direction of user vector. This is sort of a merger between user-user and item-item collaborative filtering.</p>
+<h3 id="working-with-binary-labels">
+  <a href="#working-with-binary-labels" class="md-heading-anchor">
+    Working with Binary Labels
+  </a>
+</h3>
+<p>Consider when our dataset using a rating system consisting of binary values - “user clicked video”, “user watched for 30 seconds”, etc</p>
+<p>The new rating prediction algorithm becomes not just a raw score, but a probability $\hat p_{u,i} = \sigma(U_u \cdot V_i)$ where $\sigma$ is our good ol’ friend $\sigma = \frac{1}{1 + e^{-x}}$</p>
+<p>Instead of MSE loss, we will use Binary Cross-Entropy Loss function to calculate our cost and work with gradient descent.</p>
+<p>[Here $y_{u,i}$ is the label for the training data]</p>
+$$
+J(U,V) = \sum_{u,i \in \Omega} -[y_{u,i} \log(\hat p _{u,i})+ (1-y_{u,i}) \log(1- \hat p _{u,i})] + \lambda(\sum_u ||U_u||^2 + ||V_i||^2)
+$$<p>Gradient descent goes as usual with the algorithm.</p>
+<p>We run into quite a few problems with this method however:</p>
+<ol>
+<li>
+<p>Binary cross-entropy assumes that every example is either positive or negative (likes and dislikes) which works fine.</p>
+<p>$\mathbb{P}(y=1 : u,i) + \mathbb{P}(y=0 : u,i) = 1$</p>
+<p>But what if there are no dislikes? Only likes. Since $\Omega$ is only defined for ratings that exist, $\Omega$ just becomes a completely positive set. The cost function collapses to</p>
+$$
+    J(U,V) = \sum_{u,i \in \Omega} -y_{u,i} \log(\hat p _{u,i}) + \lambda(\sum_u ||U_u||^2 + ||V_i||^2) \\
+    = \sum_{u,i \in \Omega} -y_{u,i} \log(\sigma(U_u \cdot V_i)) + \lambda(\sum_u ||U_u||^2 + ||V_i||^2)
+    $$<p>As a result $U_u \cdot V_i \to \infin$ till regularization stops it, and everything breaks. This is why <em>binary cross-entropy loss has implicit false negatives</em> when we considering ranking and recommendation</p>
+</li>
+<li>
+<p>In recommender data, positives are very few and many many negatives. The model learns that predict 0 for everything, and still get 99.9% accuracy due to the extreme class imbalance</p>
+</li>
+<li>
+<p>Binary Cross Entropy is made for classification, not ranking. Does not work well with top $K$ rankings since large values are evaluated in sigmoid as close to one.</p>
+</li>
+</ol>
+<p><strong>Solution</strong></p>
+<p>Option 1: Negative Sampling (YouTube style): Treating observed interactions as positive and small number of unobserved items as negatives. Also only apply Binary Cross Entropy to sampled pairs</p>
+<p>Option 2: Use confidence weighted implicit matrix factorization (Spotify, Industry standard)</p>
+<p>Instead of pure binary labels, define $p_{u,i} = \begin{cases} 
+1; & \text{ if interaction} \\
+0; & \text{ otherwise} \\
+\end{cases}$</p>
+<p>Make a confidence score $c_{u,i} = 1 + \alpha \cdot f_{u,i}$ where $f_{u,i}$  is the number of interactions and $\alpha$ is the scaling factor.</p>
+<p>Our objective function is</p>
+$$
+\min_{U,V} \sum_{u,i} c_{u,i} (p_{u,i} - U_u \cdot V_i)^2 + \lambda (||U_u||^2 + ||V_i||^2)
+$$<h3 id="mean-normalization">
+  <a href="#mean-normalization" class="md-heading-anchor">
+    Mean Normalization
+  </a>
+</h3>
+<p>To prevent the model from being thrown off by missing data and bias. We subtract the means, work our algorithm and then add back the mean to our predictions</p>
+<ol>
+<li>
+<p>For user-user collaborative filtering, similarity algorithms such as cosine similarity compare absolute ratings. (Pearson correlation is more immune). Here we subtract user means</p>
+$$
+    r'_{u,i} = r_{u,i} - \overline r_u
+    $$<p>and similarity becomes $\text{sim}(u,v) = \text{corr}(r'_u, r'_v)$</p>
+<p>Our prediction becomes</p>
+$$
+    \hat r_{u,i} = \overline r_u +  \frac{\sum_{v\in N(u)} \text{sim}(u,v) r_{vi}}{\sum_{v \in N(u)}|\text{sim}(u,v)|}
+    $$</li>
+<li>
+<p>For item-item collaborative filtering, the situation is similar. Here the bias is item popularity, ei number of ratings for each item. We subtract item mean</p>
+$$
+    ⁍
+    $$<p>Similarity $\text{sim}(i,j) = \text{corr}(r'_i, r'_i)$</p>
+<p>Our prediction becomes</p>
+$$
+    \hat r_{u,i} = \overline r_u +\frac{\sum_{j\in I(u)} \text{sim}(i,j) r_{uj}}{\sum_{j \in I(u)}|\text{sim}(i,j)|}
+    $$</li>
+<li>
+<p>Mean normalization for matrix factorization also fixes bias. We write down our model as</p>
+$$
+    ⁍
+    $$<p>Where, $\mu$ = global average rating, $b_u$  = user bias (rates always higher or lower), $b_i$ = item bias (popular, unpopular)</p>
+</li>
+<li>
+<p>For binary matrix factorization, we shift the logits (ie, the argument of $\sigma$). We normalize in logit space, not data space.</p>
+$$
+    \hat p_{u,i} = \sigma (\mu + b_u + b_i + U_u \cdot V_i)
+    $$</li>
+</ol>
+<h3 id="tensorflow-implementation-for-collaborative-filtering">
+  <a href="#tensorflow-implementation-for-collaborative-filtering" class="md-heading-anchor">
+    TensorFlow Implementation for Collaborative Filtering
+  </a>
+</h3>
+<p>Once we write the cost function and gradient descent algorithm, we can use TensorFlow’s automatic differentiation to compute all gradients for us and optimize the parameters efficiently.</p>
+<p>For collaborative filtering, we want to minimize the cost function:</p>
+$$
+J(W, b, X) = \frac{1}{2} \sum_{(i,j): R_{ij}=1} \left( w^{(j)} \cdot x^{(i)} + b^{(j)} - y_{ij} \right)^2 + \frac{\lambda}{2} \left( \sum_j \|w^{(j)}\|^2 + \sum_i \|x^{(i)}\|^2 \right)
+$$<p>We update the parameters using gradient descent:</p>
+$$
+W := W - \alpha \frac{\partial J}{\partial W}
+$$$$
+b := b - \alpha \frac{\partial J}{\partial b}
+$$$$
+X := X - \alpha \frac{\partial J}{\partial X}
+$$<p>Instead of manually computing these derivatives, TensorFlow’s GradientTape will do it automatically for us.</p>
+<div class="mb-codeblock" id="cb-5feceb66" data-lang="python">
+  
+  <div class="mb-codeblock-header">
+    <div class="mb-codeblock-left">
+      <span class="mb-codeblock-badge">
+        PYTHON
+      </span></div>
+
+    <div class="mb-codeblock-actions"><button class="mb-action-btn mb-collapse-btn" data-collapsed="false" aria-label="Collapse code">
+          <i class="fas fa-compress-alt"></i>
+          <span>Collapse</span>
+        </button><button class="mb-action-btn mb-copy-btn" aria-label="Copy code">
+        <i class="fas fa-copy"></i>
+        <span>Copy</span>
+      </button>
+    </div>
+  </div>
+
+  
+  <div 
+    class="mb-codeblock-content" 
+    data-state="expanded"
+  >
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Trainable variables</span>
+</span></span><span class="line"><span class="cl"><span class="n">X</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">X_init</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">W</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">W_init</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">Variable</span><span class="p">(</span><span class="n">b_init</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">alpha</span> <span class="o">=</span> <span class="mf">1e-2</span>
+</span></span><span class="line"><span class="cl"><span class="n">iterations</span> <span class="o">=</span> <span class="mi">200</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="nb">iter</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">iterations</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">GradientTape</span><span class="p">()</span> <span class="k">as</span> <span class="n">tape</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">cost_value</span> <span class="o">=</span> <span class="n">cofiCostFunc</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">            <span class="n">X</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">Ynorm</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">num_users</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">num_movies</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="n">lambda_</span>
+</span></span><span class="line"><span class="cl">        <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">grads</span> <span class="o">=</span> <span class="n">tape</span><span class="o">.</span><span class="n">gradient</span><span class="p">(</span><span class="n">cost_value</span><span class="p">,</span> <span class="p">[</span><span class="n">X</span><span class="p">,</span> <span class="n">W</span><span class="p">,</span> <span class="n">b</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># Manual gradient descent step</span>
+</span></span><span class="line"><span class="cl">    <span class="n">X</span><span class="o">.</span><span class="n">assign_sub</span><span class="p">(</span><span class="n">alpha</span> <span class="o">*</span> <span class="n">grads</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="n">W</span><span class="o">.</span><span class="n">assign_sub</span><span class="p">(</span><span class="n">alpha</span> <span class="o">*</span> <span class="n">grads</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="n">b</span><span class="o">.</span><span class="n">assign_sub</span><span class="p">(</span><span class="n">alpha</span> <span class="o">*</span> <span class="n">grads</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nb">iter</span> <span class="o">%</span> <span class="mi">20</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;Iteration </span><span class="si">{</span><span class="nb">iter</span><span class="si">}</span><span class="s2">, cost: </span><span class="si">{</span><span class="n">cost_value</span><span class="o">.</span><span class="n">numpy</span><span class="p">()</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span></span></span></code></pre></div><div class="mb-collapse-overlay">
+        <button class="mb-expand-trigger">
+          <i class="fas fa-chevron-down"></i>
+          <span>Click to expand</span>
+        </button>
+      </div></div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+  
+  const codeblock = document.getElementById('cb-5feceb66');
+  if (!codeblock) return;
+
+  const copyBtn = codeblock.querySelector('.mb-copy-btn');
+  const collapseBtn = codeblock.querySelector('.mb-collapse-btn');
+  const content = codeblock.querySelector('.mb-codeblock-content');
+  const overlay = codeblock.querySelector('.mb-collapse-overlay');
+  const expandTrigger = overlay?.querySelector('.mb-expand-trigger');
+
+  
+  
+  
+  if (copyBtn) {
+    copyBtn.addEventListener('click', async function() {
+      let codeText = '';
+
+      
+      const codeCell = codeblock.querySelector('.lntd:last-child code');
+      if (codeCell) {
+        codeText = codeCell.textContent || codeCell.innerText || '';
+      } else {
+        
+        const codeEl = codeblock.querySelector('pre code');
+        codeText = codeEl ? (codeEl.textContent || codeEl.innerText || '') : '';
+      }
+
+      try {
+        await navigator.clipboard.writeText(codeText.trim());
+        
+        
+        const originalHTML = copyBtn.innerHTML;
+        copyBtn.innerHTML = '<i class="fas fa-check"></i><span>Copied!</span>';
+        copyBtn.classList.add('mb-btn-success');
+        
+        setTimeout(() => {
+          copyBtn.innerHTML = originalHTML;
+          copyBtn.classList.remove('mb-btn-success');
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy code:', err);
+        
+        
+        const textArea = document.createElement('textarea');
+        textArea.value = codeText.trim();
+        textArea.style.position = 'fixed';
+        textArea.style.opacity = '0';
+        document.body.appendChild(textArea);
+        textArea.select();
+        
+        try {
+          document.execCommand('copy');
+          copyBtn.innerHTML = '<i class="fas fa-check"></i><span>Copied!</span>';
+          setTimeout(() => {
+            copyBtn.innerHTML = '<i class="fas fa-copy"></i><span>Copy</span>';
+          }, 2000);
+        } catch (fallbackErr) {
+          console.error('Fallback copy failed:', fallbackErr);
+        }
+        
+        document.body.removeChild(textArea);
+      }
+    });
+  }
+
+  
+  
+  
+  if (collapseBtn && content && overlay) {
+    const collapsedHeight =  200 ;
+    
+    function toggleCollapse() {
+      const isCollapsed = content.dataset.state === 'collapsed';
+      
+      if (isCollapsed) {
+        
+        content.style.maxHeight = '';
+        content.style.overflow = '';
+        content.dataset.state = 'expanded';
+        overlay.style.display = 'none';
+        collapseBtn.innerHTML = '<i class="fas fa-compress-alt"></i><span>Collapse</span>';
+        collapseBtn.dataset.collapsed = 'false';
+      } else {
+        
+        content.style.maxHeight = collapsedHeight + 'px';
+        content.style.overflow = 'hidden';
+        content.dataset.state = 'collapsed';
+        overlay.style.display = 'flex';
+        collapseBtn.innerHTML = '<i class="fas fa-expand-alt"></i><span>Expand</span>';
+        collapseBtn.dataset.collapsed = 'true';
+      }
+    }
+
+    
+    if ('expanded' === 'collapsed') {
+      content.dataset.state = 'collapsed';
+      overlay.style.display = 'flex';
+      collapseBtn.innerHTML = '<i class="fas fa-expand-alt"></i><span>Expand</span>';
+      collapseBtn.dataset.collapsed = 'true';
+    }
+
+    collapseBtn.addEventListener('click', toggleCollapse);
+    
+    if (expandTrigger) {
+      expandTrigger.addEventListener('click', toggleCollapse);
+    }
+  }
+})();
+</script>
+
+<style>
+ 
+
+.mb-codeblock-filename {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--color-text);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.35rem;
+  background: color-mix(in srgb, var(--color-bg) 40%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+}
+
+.mb-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: 0.7rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 0.4rem;
+  transition: all 0.15s ease-out;
+  font-family: inherit;
+}
+
+.mb-action-btn:hover {
+  color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+.mb-action-btn:active {
+  transform: translateY(0);
+}
+
+.mb-action-btn i {
+  font-size: 0.7rem;
+}
+
+.mb-btn-success {
+  color: #22c55e !important;
+  border-color: #22c55e !important;
+  background: color-mix(in srgb, #22c55e 12%, transparent) !important;
+}
+
+.mb-collapse-overlay {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.3) 40%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.mb-expand-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 20%, transparent);
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+  backdrop-filter: blur(8px);
+}
+
+.mb-expand-trigger:hover {
+  background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+}
+
+.mb-expand-trigger i {
+  font-size: 0.7rem;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+ 
+.mb-codeblock[data-lang="javascript"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="js"] .mb-codeblock-badge {
+  background: color-mix(in srgb, #f7df1e 25%, transparent);
+  color: #f7df1e;
+}
+
+.mb-codeblock[data-lang="typescript"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="ts"] .mb-codeblock-badge {
+  background: color-mix(in srgb, #3178c6 25%, transparent);
+  color: #3178c6;
+}
+
+.mb-codeblock[data-lang="python"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="py"] .mb-codeblock-badge {
+  background: color-mix(in srgb, #3776ab 25%, transparent);
+  color: #3776ab;
+}
+
+.mb-codeblock[data-lang="go"] .mb-codeblock-badge {
+  background: color-mix(in srgb, #00add8 25%, transparent);
+  color: #00add8;
+}
+
+.mb-codeblock[data-lang="rust"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="rs"] .mb-codeblock-badge {
+  background: color-mix(in srgb, #ce422b 25%, transparent);
+  color: #ce422b;
+}
+
+.mb-codeblock[data-lang="html"] .mb-codeblock-badge {
+  background: color-mix(in srgb, #e34c26 25%, transparent);
+  color: #e34c26;
+}
+
+.mb-codeblock[data-lang="css"] .mb-codeblock-badge {
+  background: color-mix(in srgb, #264de4 25%, transparent);
+  color: #264de4;
+}
+
+.mb-codeblock[data-lang="bash"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="sh"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="shell"] .mb-codeblock-badge {
+  background: color-mix(in srgb, #4eaa25 25%, transparent);
+  color: #4eaa25;
+}
+
+.mb-codeblock[data-lang="json"] .mb-codeblock-badge {
+  background: color-mix(in srgb, #000000 25%, transparent);
+  color: #dddddd;
+}
+
+.mb-codeblock[data-lang="yaml"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="yml"] .mb-codeblock-badge {
+  background: color-mix(in srgb, #cb171e 25%, transparent);
+  color: #cb171e;
+}
+</style><h3 id="limits-of-collaborative-filtering">
+  <a href="#limits-of-collaborative-filtering" class="md-heading-anchor">
+    Limits of Collaborative Filtering
+  </a>
+</h3>
+<ol>
+<li>Cold Start: Collaborative filtering has the issue of sparse user-item matrices $R \in
+ \mathbb{R}^{n_{\text{users}} \times n_{\text{items}}}$ - ranking items that few users have rated and recommending something reasonable that users that have not rated much is more random at the start</li>
+<li>We don’t use side information about users and items such as movie genre, movie stars, movie studio, user age, gender, location,</li>
+</ol>
+<hr>
+<h2 id="content-based-filtering">
+  <a href="#content-based-filtering" class="md-heading-anchor">
+    Content Based Filtering
+  </a>
+</h2>
+<p>Content based recommendation systems work by creating embedding vectors for users and items similar to matrix factorization based collaborative filtering.</p>
+<p>Here, again we work with a user-item interaction matrix $R \in \mathbb{R}^{n_{\text{users} }\times n_{\text{items}}}$</p>
+<p>Instead of latent item vectors, each item is embedded as an <em>explicitly</em> defined feature vector $\vec x_{\text{item}}^{(i)}$.</p>
+<p>[For example, the genre of a movie can be one-hot encoded as features, the year of release, average rating across users that have rated it, etc]</p>
+<p>Each user embedding vector $\vec x_{\text{user}}^{(j)}$ where each parameter represents the user’s preferences and data.</p>
+<p>Unlike matrix factorization, the size of item and user vectors can be different.</p>
+<p>We learn projection functions such that</p>
+$$
+V_{\text{item}}^{(i)} = f(x_{\text{item}}^{(i)}) \\
+V_{\text{user}}^{(j)} = g(x_{\text{user}}^{(j)}) \\
+$$<p>where $f, g$ can be neural networks, linear models, transformers, etc and $V_\text{item}, V_\text{user} \in \mathbb{R}^{k}$q</p>
+<p>[They must be the same dimension now]</p>
+<p>We predict the ratings by the dot product</p>
+$$
+r_{u,i} = V_\text{user}^{(j)} \cdot V_\text{item}^{(i)}
+$$<div class="md-alert md-alert-note">
+  You can see that this is very similar to matrix factorization, except that features are explicitly encoded instead of learned co-occurrence.
+</div>
+
+<h3 id="learning-projection-functions">
+  <a href="#learning-projection-functions" class="md-heading-anchor">
+    Learning projection functions $f, g$
+  </a>
+</h3>
+<p>We will use deep learning through neural networks to learn the mappings from $\vec x \to \vec V$ for both items and user feature vectors.</p>
+<img width="1600" height="900" alt="image" src="image 4.png" />
+<p>Note that it is essential that $V_\text{user}, V_\text{item}$ have the same dimension $k$</p>
+<p>For binary labels instead of 1-5 star ratings, we can compute the probability that $y_{u,i} = 1$ by using the sigmoid function</p>
+$$
+p_{u,i} = \sigma(V_u, V_i)
+$$<p>For 1-5 star like rating system, we use the cost function</p>
+$$
+J = \sum_{(i,j):r(i,j) =1} (V^{(j)}_\text{user} \cdot V^{(i)}_\text{item} - y^{(i,j)})^2 + \text{NN Regularization Term}
+$$<p>[Don’t forget that this cost function will optimize BOTH neural networks since $V_\text{user}^{(j)} \cdot V_\text{item}^{(i)} = f(x_\text{user}^{(j)}) \cdot g(x_\text{item}^{(i)})$  ]</p>
+<p>After gradient descent and learning the parameters for users and item vectors $V_\text{user}^{(j)}, V_\text{item}^{(i)}$, we can compute item $k$ similar to $i$ using $||v_\text{item}^{(k)} - v_\text{item}^{(i)}||^2$. We don’t need to find similar items every time the user queries, instead we can pre-compute this before the user even logs on.</p>
+<div class="md-alert md-alert-note">
+  <p>You can see how we optimized multiple neural networks by defining a cost function on a combination of their outputs.</p>
+<img width="1600" height="900" alt="image" src="image 5.png" />
+<p>Computational Graph</p>
+
+</div>
+
+<h3 id="tensorflow-implementation-of-content-based-filtering">
+  <a href="#tensorflow-implementation-of-content-based-filtering" class="md-heading-anchor">
+    TensorFlow Implementation of Content-Based Filtering
+  </a>
+</h3>
+<div class="mb-codeblock" id="cb-6b86b273" data-lang="python">
+  
+  <div class="mb-codeblock-header">
+    <div class="mb-codeblock-left">
+      <span class="mb-codeblock-badge">
+        PYTHON
+      </span></div>
+
+    <div class="mb-codeblock-actions"><button class="mb-action-btn mb-collapse-btn" data-collapsed="false" aria-label="Collapse code">
+          <i class="fas fa-compress-alt"></i>
+          <span>Collapse</span>
+        </button><button class="mb-action-btn mb-copy-btn" aria-label="Copy code">
+        <i class="fas fa-copy"></i>
+        <span>Copy</span>
+      </button>
+    </div>
+  </div>
+
+  
+  <div 
+    class="mb-codeblock-content" 
+    data-state="expanded"
+  >
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">tensorflow.keras</span> <span class="kn">import</span> <span class="n">Model</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">user_NN</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">item_NN</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">Sequential</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">256</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dense</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">input_user</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">num_user_features</span><span class="p">,))</span>
+</span></span><span class="line"><span class="cl"><span class="n">vu</span> <span class="o">=</span> <span class="n">user_NN</span><span class="p">(</span><span class="n">input_user</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">vu</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">l2_normalize</span><span class="p">(</span><span class="n">vu</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">input_item</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Input</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="n">num_item_features</span><span class="p">,))</span>
+</span></span><span class="line"><span class="cl"><span class="n">vm</span> <span class="o">=</span> <span class="n">item_NN</span><span class="p">(</span><span class="n">input_item</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">vm</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">l2_normalize</span><span class="p">(</span><span class="n">vm</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">output</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">layers</span><span class="o">.</span><span class="n">Dot</span><span class="p">(</span><span class="n">axes</span><span class="o">=</span><span class="mi">1</span><span class="p">)([</span><span class="n">vu</span><span class="p">,</span> <span class="n">vm</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">model</span> <span class="o">=</span> <span class="n">Model</span><span class="p">([</span><span class="n">input_user</span><span class="p">,</span> <span class="n">input_item</span><span class="p">],</span> <span class="n">output</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">cost_fn</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">losses</span><span class="o">.</span><span class="n">MeanSquaredError</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">optimizer</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="n">optimizer</span><span class="p">,</span> <span class="n">loss</span><span class="o">=</span><span class="n">cost_fn</span><span class="p">)</span></span></span></code></pre></div><div class="mb-collapse-overlay">
+        <button class="mb-expand-trigger">
+          <i class="fas fa-chevron-down"></i>
+          <span>Click to expand</span>
+        </button>
+      </div></div>
+</div>
+
+<script>
+(function() {
+  'use strict';
+  
+  const codeblock = document.getElementById('cb-6b86b273');
+  if (!codeblock) return;
+
+  const copyBtn = codeblock.querySelector('.mb-copy-btn');
+  const collapseBtn = codeblock.querySelector('.mb-collapse-btn');
+  const content = codeblock.querySelector('.mb-codeblock-content');
+  const overlay = codeblock.querySelector('.mb-collapse-overlay');
+  const expandTrigger = overlay?.querySelector('.mb-expand-trigger');
+
+  
+  
+  
+  if (copyBtn) {
+    copyBtn.addEventListener('click', async function() {
+      let codeText = '';
+
+      
+      const codeCell = codeblock.querySelector('.lntd:last-child code');
+      if (codeCell) {
+        codeText = codeCell.textContent || codeCell.innerText || '';
+      } else {
+        
+        const codeEl = codeblock.querySelector('pre code');
+        codeText = codeEl ? (codeEl.textContent || codeEl.innerText || '') : '';
+      }
+
+      try {
+        await navigator.clipboard.writeText(codeText.trim());
+        
+        
+        const originalHTML = copyBtn.innerHTML;
+        copyBtn.innerHTML = '<i class="fas fa-check"></i><span>Copied!</span>';
+        copyBtn.classList.add('mb-btn-success');
+        
+        setTimeout(() => {
+          copyBtn.innerHTML = originalHTML;
+          copyBtn.classList.remove('mb-btn-success');
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy code:', err);
+        
+        
+        const textArea = document.createElement('textarea');
+        textArea.value = codeText.trim();
+        textArea.style.position = 'fixed';
+        textArea.style.opacity = '0';
+        document.body.appendChild(textArea);
+        textArea.select();
+        
+        try {
+          document.execCommand('copy');
+          copyBtn.innerHTML = '<i class="fas fa-check"></i><span>Copied!</span>';
+          setTimeout(() => {
+            copyBtn.innerHTML = '<i class="fas fa-copy"></i><span>Copy</span>';
+          }, 2000);
+        } catch (fallbackErr) {
+          console.error('Fallback copy failed:', fallbackErr);
+        }
+        
+        document.body.removeChild(textArea);
+      }
+    });
+  }
+
+  
+  
+  
+  if (collapseBtn && content && overlay) {
+    const collapsedHeight =  200 ;
+    
+    function toggleCollapse() {
+      const isCollapsed = content.dataset.state === 'collapsed';
+      
+      if (isCollapsed) {
+        
+        content.style.maxHeight = '';
+        content.style.overflow = '';
+        content.dataset.state = 'expanded';
+        overlay.style.display = 'none';
+        collapseBtn.innerHTML = '<i class="fas fa-compress-alt"></i><span>Collapse</span>';
+        collapseBtn.dataset.collapsed = 'false';
+      } else {
+        
+        content.style.maxHeight = collapsedHeight + 'px';
+        content.style.overflow = 'hidden';
+        content.dataset.state = 'collapsed';
+        overlay.style.display = 'flex';
+        collapseBtn.innerHTML = '<i class="fas fa-expand-alt"></i><span>Expand</span>';
+        collapseBtn.dataset.collapsed = 'true';
+      }
+    }
+
+    
+    if ('expanded' === 'collapsed') {
+      content.dataset.state = 'collapsed';
+      overlay.style.display = 'flex';
+      collapseBtn.innerHTML = '<i class="fas fa-expand-alt"></i><span>Expand</span>';
+      collapseBtn.dataset.collapsed = 'true';
+    }
+
+    collapseBtn.addEventListener('click', toggleCollapse);
+    
+    if (expandTrigger) {
+      expandTrigger.addEventListener('click', toggleCollapse);
+    }
+  }
+})();
+</script>
+
+<style>
+ 
+
+.mb-codeblock-filename {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--color-text);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.35rem;
+  background: color-mix(in srgb, var(--color-bg) 40%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+}
+
+.mb-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: 0.7rem;
+  padding: 0.35rem 0.65rem;
+  border-radius: 0.4rem;
+  transition: all 0.15s ease-out;
+  font-family: inherit;
+}
+
+.mb-action-btn:hover {
+  color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 12%, transparent);
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+}
+
+.mb-action-btn:active {
+  transform: translateY(0);
+}
+
+.mb-action-btn i {
+  font-size: 0.7rem;
+}
+
+.mb-btn-success {
+  color: #22c55e !important;
+  border-color: #22c55e !important;
+  background: color-mix(in srgb, #22c55e 12%, transparent) !important;
+}
+
+.mb-collapse-overlay {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.3) 40%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.mb-expand-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 20%, transparent);
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+  backdrop-filter: blur(8px);
+}
+
+.mb-expand-trigger:hover {
+  background: color-mix(in srgb, var(--color-accent) 30%, transparent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+}
+
+.mb-expand-trigger i {
+  font-size: 0.7rem;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+}
+
+ 
+.mb-codeblock[data-lang="javascript"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="js"] .mb-codeblock-badge {
+  background: color-mix(in srgb, #f7df1e 25%, transparent);
+  color: #f7df1e;
+}
+
+.mb-codeblock[data-lang="typescript"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="ts"] .mb-codeblock-badge {
+  background: color-mix(in srgb, #3178c6 25%, transparent);
+  color: #3178c6;
+}
+
+.mb-codeblock[data-lang="python"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="py"] .mb-codeblock-badge {
+  background: color-mix(in srgb, #3776ab 25%, transparent);
+  color: #3776ab;
+}
+
+.mb-codeblock[data-lang="go"] .mb-codeblock-badge {
+  background: color-mix(in srgb, #00add8 25%, transparent);
+  color: #00add8;
+}
+
+.mb-codeblock[data-lang="rust"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="rs"] .mb-codeblock-badge {
+  background: color-mix(in srgb, #ce422b 25%, transparent);
+  color: #ce422b;
+}
+
+.mb-codeblock[data-lang="html"] .mb-codeblock-badge {
+  background: color-mix(in srgb, #e34c26 25%, transparent);
+  color: #e34c26;
+}
+
+.mb-codeblock[data-lang="css"] .mb-codeblock-badge {
+  background: color-mix(in srgb, #264de4 25%, transparent);
+  color: #264de4;
+}
+
+.mb-codeblock[data-lang="bash"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="sh"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="shell"] .mb-codeblock-badge {
+  background: color-mix(in srgb, #4eaa25 25%, transparent);
+  color: #4eaa25;
+}
+
+.mb-codeblock[data-lang="json"] .mb-codeblock-badge {
+  background: color-mix(in srgb, #000000 25%, transparent);
+  color: #dddddd;
+}
+
+.mb-codeblock[data-lang="yaml"] .mb-codeblock-badge,
+.mb-codeblock[data-lang="yml"] .mb-codeblock-badge {
+  background: color-mix(in srgb, #cb171e 25%, transparent);
+  color: #cb171e;
+}
+</style><hr>
+<h2 id="interpretation">
+  <a href="#interpretation" class="md-heading-anchor">
+    Interpretation
+  </a>
+</h2>
+<ul>
+<li>
+<p>The two neural networks learn feature projections into a shared embedding space.</p>
+</li>
+<li>
+<p>L2 normalization makes the dot product behave like cosine similarity.</p>
+</li>
+<li>
+<p>The dot layer computes:</p>
+$$
+  v_u^\top v_m
+  $$</li>
+<li>
+<p>The model is trained by minimizing Mean Squared Error between predicted and actual ratings.</p>
+</li>
+</ul>
+<h2 id="scaling-recommendation-systems">
+  <a href="#scaling-recommendation-systems" class="md-heading-anchor">
+    Scaling Recommendation Systems
+  </a>
+</h2>
+<p>Large scale recommendation systems break down their process into two parts.</p>
+<ol>
+<li>
+<p><strong>Retrieval</strong></p>
+<p>Here, we generate a list of plausible item candidates such as last 10 movies watched by the user, top 3 genres of books the user has read, top TV shows in the country, etc</p>
+<p>We remove duplicates, shows already watched and clean up the list.</p>
+<p>Retrieving more items improves performance but makes the recommendation system slower due to increased computation. To analyze and optimize the tradeoff, we must do offline experiments to see if additional recommendations are more relevant (ie, probability $p(y_{u,i}) = 1$  is higher).</p>
+</li>
+<li>
+<p><strong>Ranking</strong></p>
+<p>This is where we take the retrieval list and rank using the learned model. We display the ranked items to the user.</p>
+</li>
+</ol>
+<p>This process can reduce literally millions of inference calls to just a few thousand or hundred, making it more computationally feasible</p>
+
+          </div>
+        </div>
+      </article>
+
+      
+        <aside class="article-toc">
+          <div class="toc-wrapper">
+            <div class="toc-header">
+              <h3 class="toc-title">
+                <i class="fas fa-list-ul"></i>
+                <span>Table of Contents</span>
+              </h3>
+              <button class="toc-toggle" aria-label="Toggle table of contents">
+                <i class="fas fa-chevron-down"></i>
+              </button>
+            </div>
+            <nav class="toc-nav">
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#collaborative-filtering">Collaborative Filtering</a>
+      <ul>
+        <li><a href="#user-based"><strong>User-based</strong></a></li>
+        <li><a href="#item-based"><strong>Item-based</strong></a></li>
+        <li><a href="#matrix-factorization-decomposition"><strong>Matrix Factorization (Decomposition)</strong></a></li>
+        <li><a href="#working-with-binary-labels">Working with Binary Labels</a></li>
+        <li><a href="#mean-normalization">Mean Normalization</a></li>
+        <li><a href="#tensorflow-implementation-for-collaborative-filtering">TensorFlow Implementation for Collaborative Filtering</a></li>
+        <li><a href="#limits-of-collaborative-filtering">Limits of Collaborative Filtering</a></li>
+      </ul>
+    </li>
+    <li><a href="#content-based-filtering">Content Based Filtering</a>
+      <ul>
+        <li><a href="#learning-projection-functions">Learning projection functions </a></li>
+        <li><a href="#tensorflow-implementation-of-content-based-filtering">TensorFlow Implementation of Content-Based Filtering</a></li>
+      </ul>
+    </li>
+    <li><a href="#interpretation">Interpretation</a></li>
+    <li><a href="#scaling-recommendation-systems">Scaling Recommendation Systems</a></li>
+  </ul>
+</nav>
+            </nav>
+          </div>
+        </aside>
+
+        <script>
+        (function() {
+          'use strict';
+
+          const tocWrapper = document.querySelector('.toc-wrapper');
+          const tocToggle = document.querySelector('.toc-toggle');
+          const tocNav = document.querySelector('.toc-nav');
+          const tocLinks = document.querySelectorAll('.toc-nav a');
+
+          if (!tocWrapper || !tocNav) return;
+
+          
+          
+          
+          if (tocToggle) {
+            tocToggle.addEventListener('click', function() {
+              tocWrapper.classList.toggle('collapsed');
+            });
+          }
+
+          
+          
+          
+          tocLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
+              const targetId = this.getAttribute('href');
+              const targetElement = document.querySelector(targetId);
+
+              if (targetElement) {
+                const yOffset = -80; 
+                const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+                window.scrollTo({
+                  top: y,
+                  behavior: 'smooth'
+                });
+
+                
+                history.pushState(null, null, targetId);
+              }
+            });
+          });
+
+          
+          
+          
+          const headings = document.querySelectorAll('.markdown-body h1[id], .markdown-body h2[id], .markdown-body h3[id], .markdown-body h4[id], .markdown-body h5[id], .markdown-body h6[id]');
+
+          let activeHeading = null;
+          const observer = new IntersectionObserver(
+            (entries) => {
+              
+              const intersectingHeadings = [];
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  intersectingHeadings.push({
+                    element: entry.target,
+                    top: entry.boundingClientRect.top
+                  });
+                }
+              });
+
+              
+              if (intersectingHeadings.length > 0) {
+                
+                intersectingHeadings.sort((a, b) => Math.abs(a.top) - Math.abs(b.top));
+
+                const closestHeading = intersectingHeadings[0].element;
+                const id = closestHeading.getAttribute('id');
+
+                if (id && id !== activeHeading) {
+                  activeHeading = id;
+                  const tocLink = document.querySelector(`.toc-nav a[href="#${id}"]`);
+
+                  if (tocLink) {
+                    
+                    tocLinks.forEach(link => link.classList.remove('active'));
+                    
+                    tocLink.classList.add('active');
+                  }
+                }
+              }
+            },
+            {
+              rootMargin: '-80px 0px -80%',
+              threshold: [0, 0.25, 0.5, 0.75, 1]
+            }
+          );
+
+          
+          headings.forEach((heading) => {
+            observer.observe(heading);
+          });
+
+          
+          if (tocLinks.length > 0) {
+            tocLinks[0].classList.add('active');
+            activeHeading = tocLinks[0].getAttribute('href').substring(1);
+          }
+        })();
+        </script>
+      
+    </div>
+  </section>
+
+    </main>
+
+    <footer class="pb-6 pt-10">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6">
+    <div class="footer-shell">
+      <div class="footer-inner">
+        
+        <div class="space-y-1">
+          <p class="footer-small">
+            &copy; 2026 Himanshu Sharma&#39;s Blog — All rights
+            reserved.
+          </p>
+
+          <p class="footer-small flex flex-wrap items-center gap-1">
+            <span>Built with</span>
+
+            <a
+              href="https://gohugo.io/"
+              class="footer-link footer-float link-underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Hugo</span>
+            </a>
+
+            <span>/</span>
+
+            <a
+              href=""
+              class="footer-link footer-float link-underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Minimal&nbsp;Black</span>
+            </a>
+          </p>
+        </div>
+
+        
+        
+        <div class="footer-links">
+          
+          <a
+            href="https://github.com/Enerhim"
+            class="footer-link footer-float link-underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-github text-[0.8rem]"></i>
+            <span>GitHub</span>
+          </a>
+          
+          <a
+            href="https://www.linkedin.com/in/enerhim"
+            class="footer-link footer-float link-underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-brands fa-linkedin-in text-[0.8rem]"></i>
+            <span>LinkedIn</span>
+          </a>
+          
+          <a
+            href="himsharma.contact@gmail.com"
+            class="footer-link footer-float link-underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="fa-regular fa-envelope text-[0.8rem]"></i>
+            <span>Email</span>
+          </a>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div class="search-overlay" data-search-overlay>
+  <div class="search-overlay-backdrop" data-search-close></div>
+
+  <div class="search-panel">
+    <div class="search-panel-header">
+      <div class="search-input-wrap">
+        <i class="fa-solid fa-magnifying-glass text-[0.8rem] text-muted"></i>
+        <input
+          type="search"
+          class="search-input"
+          placeholder="Search posts..."
+          autocomplete="off"
+          data-search-input
+        />
+      </div>
+      <button
+        type="button"
+        class="search-close"
+        data-search-close
+        aria-label="Close search"
+      >
+        <i class="fa-solid fa-xmark text-[0.8rem]"></i>
+      </button>
+    </div>
+
+    <div class="search-panel-body">
+      <div class="search-results" data-search-results>
+        <div class="search-empty-state">
+          <div class="search-empty-icon">
+            <i class="fa-solid fa-magnifying-glass text-[1rem]"></i>
+          </div>
+          <p class="search-empty-title">Start searching</p>
+          <p class="search-empty-subtitle">
+            Enter keywords to search articles.
+          </p>
+        </div>
+      </div>
+
+      <div class="search-footer-hints">
+        <div class="search-hint-key">
+          <span>↑↓</span>
+          <span>Navigate</span>
+        </div>
+        <div class="search-hint-key">
+          <span>↵</span>
+          <span>Select</span>
+        </div>
+        <div class="search-hint-key">
+          <span>ESC</span>
+          <span>Close</span>
+        </div>
+        <div class="search-hint-key search-hint-right">
+          <span>Ctrl</span><span>K</span>
+          <span>Shortcut</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="dock" data-dock>
+  <div class="dock-inner">
+    
+    <div class="dock-panel" data-dock-panel>
+      
+      
+      <button
+        type="button"
+        class="dock-action"
+        data-dock-action="back"
+        aria-label="Go back"
+      >
+        <i class="fa-solid fa-arrow-left text-[0.7rem]"></i>
+      </button>
+      <span class="dock-divider" aria-hidden="true"></span>
+      
+
+      
+      <button
+        type="button"
+        class="dock-action"
+        data-dock-action="search"
+        aria-label="Search"
+        onclick="window.MinimalSearch && window.MinimalSearch.open()"
+      >
+        <i class="fa-solid fa-magnifying-glass text-[0.7rem]"></i>
+      </button>
+
+      
+      <span class="dock-divider" aria-hidden="true"></span>
+
+      
+      <button
+        type="button"
+        class="dock-action"
+        data-dock-action="top"
+        aria-label="Back to top"
+      >
+        <i class="fa-solid fa-arrow-up text-[0.7rem]"></i>
+      </button>
+    </div>
+
+    
+    <button
+      type="button"
+      class="dock-toggle"
+      aria-label="Open quick actions"
+      data-dock-toggle
+    >
+      <span class="dock-toggle-dots"></span>
+    </button>
+  </div>
+</div>
+
+  <script src="/%20js/main.js" defer></script>
+  <script src="/%20js/search.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/justified-gallery@3.8.2/dist/js/justifiedGallery.min.js" defer></script>
+  <script src="/%20js/lightbox.js" defer></script>
+  <script src="/%20js/gallery.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      renderMathInElement(document.body, {
+        delimiters: [
+          {left: "$$", right: "$$", display: true},
+          {left: "$", right: "$", display: false}
+        ]
+      });
+    });
+  </script>
+</body>
+
+</html>

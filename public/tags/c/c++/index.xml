@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C/C&#43;&#43; on Himanshu Sharma&#39;s Blog</title>
+    <link>http://localhost:1313/tags/c/c&#43;&#43;/</link>
+    <description>Recent content in C/C&#43;&#43; on Himanshu Sharma&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 28 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/c/c++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>neuralnetworkc</title>
+      <link>http://localhost:1313/projects/neuralnetworkc/</link>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/neuralnetworkc/</guid>
+      <description>&lt;p&gt;GitHub Repository: &lt;a&#xA;  href=&#34;https://github.com/enerhim/neuralnetworkc&#34;&#xA;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;  class=&#34;md-link&#34;&#xA;&gt;&#xA;  https://github.com/enerhim/neuralnetworkc&#xA;&lt;/a&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;This was a learning project of mine for learning the implementation of nns using vectorized gradient descent and backpropagation.&lt;/p&gt;&#xA;&lt;p&gt;For the &lt;em&gt;MNIST Handwritten Digits&lt;/em&gt;, the layer structure: {784, 256, 128, 10}, alpha = 0.1 w/ decay, epochs = 1000 over 60k images (full batch gradient descent): The model achieved 93.20% accuracy on 10k test images. &lt;/br&gt;&#xA;With almost the same structure and hyperparameters as above, the &lt;em&gt;MNIST Fashion Dataset&lt;/em&gt; acheived 84.15% accuracy on 10k test images. A larger hidden layer structure will likely lead to much better performance due to higher complexity of images despite them being the same size.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
