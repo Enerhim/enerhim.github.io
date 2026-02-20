@@ -1,19 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Katex on Himanshu Sharma</title><link>https://enerhim.github.io/tags/katex/</link><description>Recent content in Katex on Himanshu Sharma</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 15 Jan 2024 09:30:00 +0000</lastBuildDate><atom:link href="https://enerhim.github.io/tags/katex/index.xml" rel="self" type="application/rss+xml"/><item><title>Math &amp; KaTeX</title><link>https://enerhim.github.io/personal/math/</link><pubDate>Mon, 15 Jan 2024 09:30:00 +0000</pubDate><guid>https://enerhim.github.io/personal/math/</guid><description>&lt;h2 id="inline-math" class="mt-8 mb-3 text-xl sm:text-2xl text-white"&gt;
- &lt;span class="relative inline-block"&gt;
- Inline Math
- &lt;span
- class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
- &lt;/span&gt;
-&lt;/h2&gt;
-&lt;p&gt;The quadratic formula is $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$, used to solve any quadratic equation.&lt;/p&gt;
-&lt;p&gt;Euler&amp;rsquo;s identity, $e^{i\pi} + 1 = 0$, is considered one of the most beautiful equations in mathematics.&lt;/p&gt;
-&lt;p&gt;The Pythagorean theorem states that $a^2 + b^2 = c^2$ for any right triangle.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id="block-math" class="mt-8 mb-3 text-xl sm:text-2xl text-white"&gt;
- &lt;span class="relative inline-block"&gt;
- Block Math
- &lt;span
- class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
- &lt;/span&gt;
-&lt;/h2&gt;
-&lt;p&gt;The Gaussian integral:&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Katex on Himanshu Sharma</title>
+    <link>http://localhost:1313/tags/katex/</link>
+    <description>Recent content in Katex on Himanshu Sharma</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Jan 2024 09:30:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/katex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Math &amp; KaTeX</title>
+      <link>http://localhost:1313/personal/math/</link>
+      <pubDate>Mon, 15 Jan 2024 09:30:00 +0000</pubDate>
+      <guid>http://localhost:1313/personal/math/</guid>
+      <description>&lt;h2 id=&#34;inline-math&#34; class=&#34;mt-8 mb-3 text-xl sm:text-2xl text-white&#34;&gt;&#xA;    &lt;span class=&#34;relative inline-block&#34;&gt;&#xA;      Inline Math&#xA;      &lt;span&#xA;        class=&#34;absolute left-0 -bottom-1 h-px w-0 bg-indigo-400&#34;&gt;&lt;/span&gt;&#xA;    &lt;/span&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The quadratic formula is $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$, used to solve any quadratic equation.&lt;/p&gt;&#xA;&lt;p&gt;Euler&amp;rsquo;s identity, $e^{i\pi} + 1 = 0$, is considered one of the most beautiful equations in mathematics.&lt;/p&gt;&#xA;&lt;p&gt;The Pythagorean theorem states that $a^2 + b^2 = c^2$ for any right triangle.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;block-math&#34; class=&#34;mt-8 mb-3 text-xl sm:text-2xl text-white&#34;&gt;&#xA;    &lt;span class=&#34;relative inline-block&#34;&gt;&#xA;      Block Math&#xA;      &lt;span&#xA;        class=&#34;absolute left-0 -bottom-1 h-px w-0 bg-indigo-400&#34;&gt;&lt;/span&gt;&#xA;    &lt;/span&gt;&#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The Gaussian integral:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

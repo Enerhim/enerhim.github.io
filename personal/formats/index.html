@@ -1,4 +1,176 @@
-<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width"><link rel=icon type=image/png href=/avatar.png><title>Formatting</title><script src=https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4></script><link rel=stylesheet type=text/css href=https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin=anonymous referrerpolicy=no-referrer><style>@import 'https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap';.font-jersey{font-family:ubuntu sans mono,monospace;font-optical-sizing:auto;font-style:normal}.md-content .katex-display{max-width:100%;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;padding-left:.25rem;padding-right:.25rem}.md-content .katex-display>.katex{display:inline-block;max-width:100%}.swup-transition-fade{opacity:1;transition:300ms ease-in-out}.is-animating .swup-transition-fade{opacity:0}.swup-transition-fade{opacity:1;transition:opacity 300ms ease-in-out}html.is-animating .swup-transition-fade{opacity:0}html.is-animating{cursor:progress}html.is-leaving .swup-transition-fade{opacity:0}</style><script src=https://unpkg.com/swup@4></script><script src=https://unpkg.com/@swup/preload-plugin@3></script><script src=https://unpkg.com/@swup/progress-plugin@3></script><script>const swup=new Swup({containers:["#swup"],animationSelector:'[class*="swup-transition-"]',cache:!0,preload:!0,animateHistoryBrowsing:!0,plugins:[new SwupPreloadPlugin,new SwupProgressPlugin]});window.swup=swup</script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js crossorigin=anonymous></script><script>const KATEX_CONFIG={delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\[",right:"\\]",display:!0},{left:"\\(",right:"\\)",display:!1}],ignoredTags:["script","noscript","style","textarea","pre","code"],throwOnError:!1};function renderKatex(){if(typeof renderMathInElement!="function"){console.log("⏳ Waiting for KaTeX to load...");return}const e=document.getElementById("swup")||document.body;try{renderMathInElement(e,KATEX_CONFIG),console.log("✅ KaTeX rendered successfully")}catch(e){console.error("❌ KaTeX rendering error:",e)}}function renderKatexWithRetry(e=10,t=100){let n=0;const s=()=>{typeof renderMathInElement=="function"?renderKatex():n<e?(n++,setTimeout(s,t)):console.warn("⚠️ KaTeX auto-render not available after",e,"attempts")};s()}function setupSwupIntegration(){window.swup?(window.swup.hooks.on("page:view",()=>{console.log("🔄 Swup transition complete, re-rendering KaTeX..."),setTimeout(()=>renderKatexWithRetry(3,50),50)}),console.log("✅ KaTeX-Swup integration ready")):setTimeout(setupSwupIntegration,100)}document.addEventListener("DOMContentLoaded",function(){console.log("🚀 Initializing KaTeX..."),renderKatexWithRetry(),setupSwupIntegration()}),window.renderKatex=renderKatex</script><script type=module>
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="icon" type="image/png" href="/avatar.png">
+<title>Formatting</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+  integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+
+  .font-jersey {
+
+    font-family: "Ubuntu Sans Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+
+  .md-content .katex-display {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
+  .md-content .katex-display>.katex {
+    display: inline-block;
+    max-width: 100%;
+  }
+
+  .swup-transition-fade {
+    opacity: 1;
+    transition: 300ms ease-in-out;
+  }
+
+  .is-animating .swup-transition-fade {
+    opacity: 0;
+  }
+
+  .swup-transition-fade {
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+  }
+
+  html.is-animating .swup-transition-fade {
+    opacity: 0;
+  }
+
+  html.is-animating {
+    cursor: progress;
+  }
+
+  html.is-leaving .swup-transition-fade {
+    opacity: 0;
+  }
+</style>
+
+<script src="https://unpkg.com/swup@4"></script>
+<script src="https://unpkg.com/@swup/preload-plugin@3"></script>
+<script src="https://unpkg.com/@swup/progress-plugin@3"></script>
+<script>
+  const swup = new Swup({
+    containers: ['#swup'],
+    animationSelector: '[class*="swup-transition-"]',
+    cache: true,
+    preload: true,
+    animateHistoryBrowsing: true,
+
+    plugins: [
+      new SwupPreloadPlugin(),
+      new SwupProgressPlugin()
+    ]
+  })
+  window.swup = swup
+</script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  crossorigin="anonymous"></script>
+
+<script>
+  
+
+  
+  const KATEX_CONFIG = {
+    delimiters: [
+      {left: "$$", right: "$$", display: true},
+      {left: "$", right: "$", display: false},
+      {left: "\\[", right: "\\]", display: true},
+      {left: "\\(", right: "\\)", display: false}
+    ],
+    ignoredTags: ["script", "noscript", "style", "textarea", "pre", "code"],
+    throwOnError: false
+  };
+
+  
+  function renderKatex() {
+    
+    if (typeof renderMathInElement !== "function") {
+      console.log("⏳ Waiting for KaTeX to load...");
+      return;
+    }
+
+    
+    const contentArea = document.getElementById('swup') || document.body;
+
+    try {
+      renderMathInElement(contentArea, KATEX_CONFIG);
+      console.log("✅ KaTeX rendered successfully");
+    } catch (error) {
+      console.error("❌ KaTeX rendering error:", error);
+    }
+  }
+
+  
+  function renderKatexWithRetry(maxRetries = 10, delay = 100) {
+    let attempts = 0;
+
+    const attempt = () => {
+      if (typeof renderMathInElement === "function") {
+        renderKatex();
+      } else if (attempts < maxRetries) {
+        attempts++;
+        setTimeout(attempt, delay);
+      } else {
+        console.warn("⚠️ KaTeX auto-render not available after", maxRetries, "attempts");
+      }
+    };
+
+    attempt();
+  }
+
+  
+  function setupSwupIntegration() {
+    
+    if (window.swup) {
+      window.swup.hooks.on('page:view', () => {
+        console.log("🔄 Swup transition complete, re-rendering KaTeX...");
+        
+        setTimeout(() => renderKatexWithRetry(3, 50), 50);
+      });
+      console.log("✅ KaTeX-Swup integration ready");
+    } else {
+      
+      setTimeout(setupSwupIntegration, 100);
+    }
+  }
+
+  
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log("🚀 Initializing KaTeX...");
+
+    
+    renderKatexWithRetry();
+
+    
+    setupSwupIntegration();
+  });
+
+  
+  window.renderKatex = renderKatex;
+</script>
+
+<script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
 
   let initialized = false;
@@ -80,46 +252,641 @@
 
 
 
-</script></head><body class="min-h-screen flex flex-col bg-black font-jersey text-white text-3xl"><header><div class="sticky absolute top-0 z-50"><nav class="w-full border-b border-gray-800 bg-[#070709]/95 backdrop-blur-sm text-gray-100"><div class="max-w-6xl mx-auto px-4 sm:px-6"><div class="flex items-center justify-between h-16"><div class="flex items-center gap-3"><a href=https://enerhim.github.io/ class="flex items-center gap-3 group" aria-label=Homepage><img src=/avatar.jpg alt="Himanshu Sharma" class="w-10 h-10 rounded-sm border-2 border-gray-700 object-cover transition-transform duration-300 transform group-hover:scale-105" style="animation:border-breathe 4s ease-in-out infinite">
-<span class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-wide">Himanshu Sharma
-<span class="inline-block ml-2" style="animation:flicker 1.6s steps(2,end)infinite">_</span></span></a></div><div class="flex items-center gap-4"><div class="hidden md:flex items-center"><nav aria-label=Primary class=w-full><ul class="flex flex-col md:flex-row md:items-center md:space-x-6 space-y-2 md:space-y-0 sm:text-lg md:text-xl lg:text-3xl"><li><a href=/blog/ class="group inline-flex items-center px-3 py-2 rounded-sm text-gray-200 hover:text-white transition-colors duration-200"><span class="relative inline-block"><span>Blog</span>
-<span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-indigo-400 transition-all duration-300 group-hover:w-full"></span></span></a></li><li><a href=/projects/ class="group inline-flex items-center px-3 py-2 rounded-sm text-gray-200 hover:text-white transition-colors duration-200"><span class="relative inline-block"><span>Projects</span>
-<span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-indigo-400 transition-all duration-300 group-hover:w-full"></span></span></a></li></ul></nav></div><div class=md:hidden><button id=nav-toggle aria-controls=mobile-menu aria-expanded=false class="inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400" aria-label="Open menu">
-<svg class="h-6 w-6 text-gray-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button></div></div></div><div id=mobile-menu class="md:hidden hidden pb-4"><nav aria-label=Primary class=w-full><ul class="flex flex-col md:flex-row md:items-center md:space-x-6 space-y-2 md:space-y-0 sm:text-lg md:text-xl lg:text-3xl"><li><a href=/blog/ class="group inline-flex items-center px-3 py-2 rounded-sm text-gray-200 hover:text-white transition-colors duration-200"><span class="relative inline-block"><span>Blog</span>
-<span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-indigo-400 transition-all duration-300 group-hover:w-full"></span></span></a></li><li><a href=/projects/ class="group inline-flex items-center px-3 py-2 rounded-sm text-gray-200 hover:text-white transition-colors duration-200"><span class="relative inline-block"><span>Projects</span>
-<span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-indigo-400 transition-all duration-300 group-hover:w-full"></span></span></a></li></ul></nav></div></div></nav><style>@keyframes flicker{0%{opacity:1;transform:translateY(0)}10%{opacity:.2;transform:translateY(-1px)}20%{opacity:1;transform:translateY(0)}100%{opacity:1}}@keyframes border-breathe{0%{box-shadow:0 0 rgba(99,102,241,6%)}50%{box-shadow:0 0 18px 6px rgba(99,102,241,3%)}100%{box-shadow:0 0 rgba(99,102,241,6%)}}</style><script>(function(){const e=document.getElementById("nav-toggle"),t=document.getElementById("mobile-menu");if(!e||!t)return;e.addEventListener("click",()=>{const n=t.classList.toggle("hidden")===!1;e.setAttribute("aria-expanded",n?"true":"false")})})()</script></div></header><main class="flex-1 w-full"><div id=swup class=swup-transition-fade><div class="max-w-3xl lg:max-w-6xl xl:max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-10 lg:py-16"><main class="max-w-6xl mx-auto px-4 sm:px-6 pt-24 pb-12 text-gray-100"><div class="grid grid-cols-12 gap-6"><aside class="hidden lg:block col-span-3"><div class="sticky top-24"><div class="mb-3 text-xs uppercase tracking-widest text-gray-500">Table of Contents</div><nav class="toc text-sm text-gray-300 border border-gray-800/70 bg-[#070709] rounded-sm p-4"><nav id=TableOfContents><ul><li><a href=#headings>Headings</a></li></ul><ul><li><a href=#heading-2>Heading 2</a><ul><li><a href=#heading-3>Heading 3</a></li></ul></li><li><a href=#emphasis>Emphasis</a></li><li><a href=#table>Table</a></li><li><a href=#blockquotes>Blockquotes</a></li><li><a href=#horizontal-rule>Horizontal Rule</a></li><li><a href=#lists>Lists</a></li></ul></nav></nav></div></aside><article class="col-span-12 lg:col-span-7"><header class=mb-6><h1 class="text-2xl sm:text-3xl md:text-4xl tracking-wide text-white">Formatting</h1><div class="mt-2 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm sm:text-base text-gray-400"><span class=font-mono>May 10, 2024 • 18:20</span>
-<span class=text-gray-700>/</span>
-<span class=font-mono>1 min read</span></div><div class="mt-3 flex flex-wrap gap-2"><a href=/%20tags/markdown class="px-2 py-0.5 text-xs sm:text-sm rounded-sm border border-gray-700/70 text-gray-300 bg-black/30 hover:text-white hover:border-indigo-400/40 transition-colors">#markdown
-</a><a href=/%20tags/formatting class="px-2 py-0.5 text-xs sm:text-sm rounded-sm border border-gray-700/70 text-gray-300 bg-black/30 hover:text-white hover:border-indigo-400/40 transition-colors">#formatting
-</a><a href=/%20tags/typography class="px-2 py-0.5 text-xs sm:text-sm rounded-sm border border-gray-700/70 text-gray-300 bg-black/30 hover:text-white hover:border-indigo-400/40 transition-colors">#typography
-</a><a href=/%20tags/documentation class="px-2 py-0.5 text-xs sm:text-sm rounded-sm border border-gray-700/70 text-gray-300 bg-black/30 hover:text-white hover:border-indigo-400/40 transition-colors">#documentation
-</a><a href=/%20tags/reference class="px-2 py-0.5 text-xs sm:text-sm rounded-sm border border-gray-700/70 text-gray-300 bg-black/30 hover:text-white hover:border-indigo-400/40 transition-colors">#reference</a></div></header><div class="lg:hidden mb-6"><details class="border border-gray-800/70 bg-[#070709] rounded-sm"><summary class="cursor-pointer select-none px-4 py-3 text-gray-200 hover:text-white transition-colors">Table of Contents</summary><div class="px-4 pb-4 toc text-sm text-gray-300"><nav id=TableOfContents><ul><li><a href=#headings>Headings</a></li></ul><ul><li><a href=#heading-2>Heading 2</a><ul><li><a href=#heading-3>Heading 3</a></li></ul></li><li><a href=#emphasis>Emphasis</a></li><li><a href=#table>Table</a></li><li><a href=#blockquotes>Blockquotes</a></li><li><a href=#horizontal-rule>Horizontal Rule</a></li><li><a href=#lists>Lists</a></li></ul></nav></div></details></div><div class="md-surface border border-gray-800/70 bg-[#070709] rounded-sm p-4 sm:p-6"><div class="md-content text-base leading-relaxed text-gray-200"><h2 id=headings class="mt-8 mb-3 text-xl sm:text-2xl text-white"><span class="relative inline-block">Headings
-<span class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span></span></h2><h1 id=heading-1 class="mt-8 mb-3 text-2xl sm:text-3xl text-white"><span class="relative inline-block">Heading 1
-<span class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span></span></h1><h2 id=heading-2 class="mt-8 mb-3 text-xl sm:text-2xl text-white"><span class="relative inline-block">Heading 2
-<span class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span></span></h2><h3 id=heading-3 class="mt-6 mb-2 text-lg sm:text-xl text-white"><span class="relative inline-block">Heading 3
-<span class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span></span></h3><h4 id=heading-4 class="mt-5 mb-2 text-base sm:text-lg text-white"><span class="relative inline-block">Heading 4
-<span class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span></span></h4><h5 id=heading-5 class="mt-5 mb-2 text-base sm:text-lg text-white"><span class="relative inline-block">Heading 5
-<span class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span></span></h5><h6 id=heading-6 class="mt-5 mb-2 text-base sm:text-lg text-white"><span class="relative inline-block">Heading 6
-<span class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span></span></h6><hr><h2 id=emphasis class="mt-8 mb-3 text-xl sm:text-2xl text-white"><span class="relative inline-block">Emphasis
-<span class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span></span></h2><p>Regular text, <strong>bold text</strong>, <em>italic text</em>, <em><strong>bold and italic</strong></em>, <del>strikethrough</del>, and <code>inline code</code>.</p><hr><h2 id=table class="mt-8 mb-3 text-xl sm:text-2xl text-white"><span class="relative inline-block">Table
-<span class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span></span></h2><div class="overflow-x-auto my-6 border border-neutral-800 rounded"><table class="w-full border-collapse bg-neutral-950 text-gray-300 text-[0.95rem] min-w-full"><thead class="bg-neutral-900 border-b-2 border-gray-200"><tr><th class="px-4 py-3 font-semibold text-left text-gray-200 whitespace-nowrap">Language</th><th class="px-4 py-3 font-semibold text-left text-gray-200 whitespace-nowrap">Paradigm</th><th class="px-4 py-3 font-semibold text-left text-gray-200 whitespace-nowrap">Typing</th></tr></thead><tbody><tr class="border-b border-neutral-800 transition-colors hover:bg-neutral-900 last:border-b-0"><td class="px-4 py-3 text-gray-400">Go</td><td class="px-4 py-3 text-gray-400">Compiled</td><td class="px-4 py-3 text-gray-400">Static</td></tr><tr class="border-b border-neutral-800 transition-colors hover:bg-neutral-900 last:border-b-0"><td class="px-4 py-3 text-gray-400">Python</td><td class="px-4 py-3 text-gray-400">Interpreted</td><td class="px-4 py-3 text-gray-400">Dynamic</td></tr><tr class="border-b border-neutral-800 transition-colors hover:bg-neutral-900 last:border-b-0"><td class="px-4 py-3 text-gray-400">Rust</td><td class="px-4 py-3 text-gray-400">Compiled</td><td class="px-4 py-3 text-gray-400">Static</td></tr><tr class="border-b border-neutral-800 transition-colors hover:bg-neutral-900 last:border-b-0"><td class="px-4 py-3 text-gray-400">JavaScript</td><td class="px-4 py-3 text-gray-400">Interpreted</td><td class="px-4 py-3 text-gray-400">Dynamic</td></tr></tbody></table></div><hr><h2 id=blockquotes class="mt-8 mb-3 text-xl sm:text-2xl text-white"><span class="relative inline-block">Blockquotes
-<span class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span></span></h2><figure class=my-8><blockquote class="relative rounded-xl border border-blue-500/20 bg-blue-950/25 px-5 py-4 text-gray-300 transition-shadow duration-200 hover:shadow-[0_0_0_1px_rgba(96,165,250,0.15)]"><span class="absolute inset-y-3 left-0 w-0.5 rounded-full bg-blue-400/60"></span>
-<span class="absolute right-4 top-2.5 select-none font-mono text-[0.6rem] tracking-widest text-white/10">///</span><div class="mb-3 flex items-center gap-2"><span class="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-400/15 font-mono text-[0.65rem] font-bold text-blue-400">i</span>
-<span class="font-mono text-[0.68rem] font-bold uppercase tracking-widest text-blue-400/90">— This is a standard note blockquote.</span></div><div class="mb-3 h-px bg-gradient-to-r from-blue-400/15 to-transparent"></div><div class="font-mono text-sm leading-relaxed [&_code]:rounded [&_code]:bg-white/5 [&_code]:px-1.5 [&_code]:py-0.5 [&_p]:mb-2 [&_p:last-child]:mb-0 [&_strong]:text-white"></div></blockquote></figure><figure class=my-8><blockquote class="relative rounded-xl border border-emerald-500/20 bg-emerald-950/25 px-5 py-4 text-gray-300 transition-shadow duration-200 hover:shadow-[0_0_0_1px_rgba(52,211,153,0.15)]"><span class="absolute inset-y-3 left-0 w-0.5 rounded-full bg-emerald-400/60"></span>
-<span class="absolute right-4 top-2.5 select-none font-mono text-[0.6rem] tracking-widest text-white/10">///</span><div class="mb-3 flex items-center gap-2"><span class="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-400/15 font-mono text-[0.65rem] font-bold text-emerald-400">↑</span>
-<span class="font-mono text-[0.68rem] font-bold uppercase tracking-widest text-emerald-400/90">— This is a tip.</span></div><div class="mb-3 h-px bg-gradient-to-r from-emerald-400/15 to-transparent"></div><div class="font-mono text-sm leading-relaxed [&_code]:rounded [&_code]:bg-white/5 [&_code]:px-1.5 [&_code]:py-0.5 [&_p]:mb-2 [&_p:last-child]:mb-0 [&_strong]:text-white"></div></blockquote></figure><figure class=my-8><blockquote class="relative rounded-xl border border-amber-500/20 bg-amber-950/20 px-5 py-4 text-gray-300 transition-shadow duration-200 hover:shadow-[0_0_0_1px_rgba(251,191,36,0.15)]"><span class="absolute inset-y-3 left-0 w-0.5 rounded-full bg-amber-400/60"></span>
-<span class="absolute right-4 top-2.5 select-none font-mono text-[0.6rem] tracking-widest text-white/10">///</span><div class="mb-3 flex items-center gap-2"><span class="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber-400/15 font-mono text-[0.6rem] font-bold text-amber-400">!</span>
-<span class="font-mono text-[0.68rem] font-bold uppercase tracking-widest text-amber-400/90">— This is a warning.</span></div><div class="mb-3 h-px bg-gradient-to-r from-amber-400/15 to-transparent"></div><div class="font-mono text-sm leading-relaxed [&_code]:rounded [&_code]:bg-white/5 [&_code]:px-1.5 [&_code]:py-0.5 [&_p]:mb-2 [&_p:last-child]:mb-0 [&_strong]:text-white"></div></blockquote></figure><figure class=my-8><blockquote class="relative rounded-xl border border-blue-500/20 bg-blue-950/25 px-5 py-4 text-gray-300 transition-shadow duration-200 hover:shadow-[0_0_0_1px_rgba(96,165,250,0.15)]"><span class="absolute inset-y-3 left-0 w-0.5 rounded-full bg-blue-400/60"></span>
-<span class="absolute right-4 top-2.5 select-none font-mono text-[0.6rem] tracking-widest text-white/10">///</span><div class="mb-3 flex items-center gap-2"><span class="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-400/15 font-mono text-[0.65rem] font-bold text-blue-400">i</span>
-<span class="font-mono text-[0.68rem] font-bold uppercase tracking-widest text-blue-400/90">— This is an important blockquote.</span></div><div class="mb-3 h-px bg-gradient-to-r from-blue-400/15 to-transparent"></div><div class="font-mono text-sm leading-relaxed [&_code]:rounded [&_code]:bg-white/5 [&_code]:px-1.5 [&_code]:py-0.5 [&_p]:mb-2 [&_p:last-child]:mb-0 [&_strong]:text-white"></div></blockquote></figure><hr><h2 id=horizontal-rule class="mt-8 mb-3 text-xl sm:text-2xl text-white"><span class="relative inline-block">Horizontal Rule
-<span class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span></span></h2><p>Above the rule.</p><hr><p>Below the rule.</p><hr><h2 id=lists class="mt-8 mb-3 text-xl sm:text-2xl text-white"><span class="relative inline-block">Lists
-<span class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span></span></h2><p><strong>Unordered:</strong></p><ul><li>Item one</li><li>Item two<ul><li>Nested item</li><li>Another nested item</li></ul></li><li>Item three</li></ul><p><strong>Ordered:</strong></p><ol><li>First step</li><li>Second step<ol><li>Sub-step A</li><li>Sub-step B</li></ol></li><li>Third step</li></ol><p><strong>Task list:</strong></p><ul><li><input checked disabled type=checkbox> Set up Hugo</li><li><input checked disabled type=checkbox> Configure theme</li><li><input disabled type=checkbox> Write content</li><li><input disabled type=checkbox> Deploy to production</li></ul></div></div></article><div class="hidden lg:block col-span-2"></div></div></main></div></div></main><footer><div class="border-t border-gray-800 bg-[#070709] text-gray-400"><div class="max-w-6xl mx-auto px-4 sm:px-6"><div class="flex flex-col md:flex-row items-center justify-between py-6 space-y-4 md:space-y-0"><div class="text-sm sm:text-base md:text-lg"><span class="relative inline-block">© 2026 Himanshu Sharma. All rights reserved.<br>Made with <a href=https://gohugo.io target=_blank>Hugo</a> | <a href=https://github.com/Enerhim/enervoid-theme target=_blank>Enervoid</a></span></div><div class="flex items-center space-x-6 text-sm sm:text-base md:text-lg"><a href=https://github.com/Enerhim target=_blank rel=noopener class="group relative inline-block transition-colors duration-200 hover:text-gray-200"><i class=devicon-github-original></i>
-<span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-indigo-400 transition-all duration-300 group-hover:w-full"></span>
-</a><a href=https://twitter.com/HimEner target=_blank rel=noopener class="group relative inline-block transition-colors duration-200 hover:text-gray-200"><i class=devicon-twitter-original></i>
-<span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-indigo-400 transition-all duration-300 group-hover:w-full"></span>
-</a><a href=https://linkedin.in/enerhim target=_blank rel=noopener class="group relative inline-block transition-colors duration-200 hover:text-gray-200"><i class=devicon-linkedin-plain></i>
-<span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-indigo-400 transition-all duration-300 group-hover:w-full"></span>
-</a><a href=https://itch.io/profile/Enerhim target=_blank rel=noopener class="group relative inline-block transition-colors duration-200 hover:text-gray-200"><i class="fa-brands fa-itch-io"></i>
-<span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-indigo-400 transition-all duration-300 group-hover:w-full"></span>
-</a><a href=https://gitlab.com/enerhim0 target=_blank rel=noopener class="group relative inline-block transition-colors duration-200 hover:text-gray-200"><i class="fa-brands fa-gitlab"></i>
-<span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-indigo-400 transition-all duration-300 group-hover:w-full"></span></a></div></div></div></div></footer></body></html>
+</script>
+
+
+</head>
+
+<body class="min-h-screen flex flex-col bg-black font-jersey text-white text-3xl">
+  <header>
+    <div class="sticky absolute top-0 z-50">
+  <nav class="w-full border-b border-gray-800 bg-[#070709]/95 backdrop-blur-sm text-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-center justify-between h-16">
+        
+        <div class="flex items-center gap-3">
+
+          <a href='http://localhost:1313/' class="flex items-center gap-3 group" aria-label="Homepage">
+
+            <img src='/avatar.jpg' alt="Himanshu Sharma"
+              class="w-10 h-10 rounded-sm border-2 border-gray-700 object-cover transition-transform duration-300 transform group-hover:scale-105"
+              style="animation: border-breathe 4s ease-in-out infinite;" />
+            <span class="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-wide">
+              Himanshu Sharma
+              <span class="inline-block ml-2" style="animation: flicker 1.6s steps(2, end) infinite;">_</span>
+            </span>
+          </a>
+        </div>
+
+        
+        <div class="flex items-center gap-4">
+          
+          <div class="hidden md:flex items-center">
+            
+
+<nav aria-label="Primary" class="w-full">
+  <ul
+    class="flex flex-col md:flex-row md:items-center md:space-x-6 space-y-2 md:space-y-0 sm:text-lg md:text-xl lg:text-3xl"><li>
+      <a href="/blog/"class="group inline-flex items-center px-3 py-2 rounded-sm text-gray-200 hover:text-white transition-colors duration-200">
+        <span class="relative inline-block">
+          <span>Blog</span>
+          
+          <span
+            class="absolute left-0 -bottom-1 h-[2px] w-0 bg-indigo-400 transition-all duration-300 group-hover:w-full"></span>
+        </span>
+      </a>
+    </li><li>
+      <a href="/projects/"class="group inline-flex items-center px-3 py-2 rounded-sm text-gray-200 hover:text-white transition-colors duration-200">
+        <span class="relative inline-block">
+          <span>Projects</span>
+          
+          <span
+            class="absolute left-0 -bottom-1 h-[2px] w-0 bg-indigo-400 transition-all duration-300 group-hover:w-full"></span>
+        </span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+          </div>
+
+          
+          <div class="md:hidden">
+            <button id="nav-toggle" aria-controls="mobile-menu" aria-expanded="false"
+              class="inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              aria-label="Open menu">
+              <svg class="h-6 w-6 text-gray-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      
+      <div id="mobile-menu" class="md:hidden hidden pb-4">
+        
+        
+
+<nav aria-label="Primary" class="w-full">
+  <ul
+    class="flex flex-col md:flex-row md:items-center md:space-x-6 space-y-2 md:space-y-0 sm:text-lg md:text-xl lg:text-3xl"><li>
+      <a href="/blog/"class="group inline-flex items-center px-3 py-2 rounded-sm text-gray-200 hover:text-white transition-colors duration-200">
+        <span class="relative inline-block">
+          <span>Blog</span>
+          
+          <span
+            class="absolute left-0 -bottom-1 h-[2px] w-0 bg-indigo-400 transition-all duration-300 group-hover:w-full"></span>
+        </span>
+      </a>
+    </li><li>
+      <a href="/projects/"class="group inline-flex items-center px-3 py-2 rounded-sm text-gray-200 hover:text-white transition-colors duration-200">
+        <span class="relative inline-block">
+          <span>Projects</span>
+          
+          <span
+            class="absolute left-0 -bottom-1 h-[2px] w-0 bg-indigo-400 transition-all duration-300 group-hover:w-full"></span>
+        </span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+      </div>
+    </div>
+  </nav>
+
+  
+  <style>
+    @keyframes flicker {
+      0% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      10% {
+        opacity: 0.2;
+        transform: translateY(-1px);
+      }
+
+      20% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes border-breathe {
+      0% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.06);
+      }
+
+      50% {
+        box-shadow: 0 0 18px 6px rgba(99, 102, 241, 0.03);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.06);
+      }
+    }
+  </style>
+
+  
+  <script>
+    (function () {
+      const btn = document.getElementById('nav-toggle');
+      const menu = document.getElementById('mobile-menu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', () => {
+        const open = menu.classList.toggle('hidden') === false;
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
+</div>
+
+  </header>
+
+  <main class="flex-1 w-full">
+    <div id="swup" class="swup-transition-fade">
+      <div class="max-w-3xl lg:max-w-6xl xl:max-w-7xl mx-auto px-5 sm:px-8 lg:px-10 py-10 lg:py-16">
+        
+<main class="max-w-6xl mx-auto px-4 sm:px-6 pt-24 pb-12 text-gray-100">
+  <div class="grid grid-cols-12 gap-6">
+    <aside class="hidden lg:block col-span-3">
+      <div class="sticky top-24">
+        <div class="mb-3 text-xs uppercase tracking-widest text-gray-500">Table of Contents</div><nav class="toc text-sm text-gray-300 border border-gray-800/70 bg-[#070709] rounded-sm p-4">
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#headings">Headings</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#heading-2">Heading 2</a>
+      <ul>
+        <li><a href="#heading-3">Heading 3</a></li>
+      </ul>
+    </li>
+    <li><a href="#emphasis">Emphasis</a></li>
+    <li><a href="#table">Table</a></li>
+    <li><a href="#blockquotes">Blockquotes</a></li>
+    <li><a href="#horizontal-rule">Horizontal Rule</a></li>
+    <li><a href="#lists">Lists</a></li>
+  </ul>
+</nav>
+        </nav></div>
+    </aside>
+
+    <article class="col-span-12 lg:col-span-7">
+      <header class="mb-6">
+  <h1 class="text-2xl sm:text-3xl md:text-4xl tracking-wide text-white">
+    Formatting
+  </h1>
+
+  <div class="mt-2 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm sm:text-base text-gray-400">
+    <span class="font-mono">May 10, 2024 • 18:20</span>
+    <span class="text-gray-700">/</span>
+    <span class="font-mono">1 min read</span>
+  </div><div class="mt-3 flex flex-wrap gap-2"><a href="/%20tags/markdown"
+      class="px-2 py-0.5 text-xs sm:text-sm rounded-sm border border-gray-700/70 text-gray-300 bg-black/30 hover:text-white hover:border-indigo-400/40 transition-colors">
+      #markdown
+    </a><a href="/%20tags/formatting"
+      class="px-2 py-0.5 text-xs sm:text-sm rounded-sm border border-gray-700/70 text-gray-300 bg-black/30 hover:text-white hover:border-indigo-400/40 transition-colors">
+      #formatting
+    </a><a href="/%20tags/typography"
+      class="px-2 py-0.5 text-xs sm:text-sm rounded-sm border border-gray-700/70 text-gray-300 bg-black/30 hover:text-white hover:border-indigo-400/40 transition-colors">
+      #typography
+    </a><a href="/%20tags/documentation"
+      class="px-2 py-0.5 text-xs sm:text-sm rounded-sm border border-gray-700/70 text-gray-300 bg-black/30 hover:text-white hover:border-indigo-400/40 transition-colors">
+      #documentation
+    </a><a href="/%20tags/reference"
+      class="px-2 py-0.5 text-xs sm:text-sm rounded-sm border border-gray-700/70 text-gray-300 bg-black/30 hover:text-white hover:border-indigo-400/40 transition-colors">
+      #reference
+    </a></div></header>
+
+
+      <div class="lg:hidden mb-6">
+        <details class="border border-gray-800/70 bg-[#070709] rounded-sm">
+          <summary class="cursor-pointer select-none px-4 py-3 text-gray-200 hover:text-white transition-colors">
+            Table of Contents
+          </summary>
+          <div class="px-4 pb-4 toc text-sm text-gray-300">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#headings">Headings</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#heading-2">Heading 2</a>
+      <ul>
+        <li><a href="#heading-3">Heading 3</a></li>
+      </ul>
+    </li>
+    <li><a href="#emphasis">Emphasis</a></li>
+    <li><a href="#table">Table</a></li>
+    <li><a href="#blockquotes">Blockquotes</a></li>
+    <li><a href="#horizontal-rule">Horizontal Rule</a></li>
+    <li><a href="#lists">Lists</a></li>
+  </ul>
+</nav>
+          </div>
+        </details>
+      </div>
+
+      <div class="md-surface border border-gray-800/70 bg-[#070709] rounded-sm p-4 sm:p-6">
+        <div class="md-content text-base leading-relaxed text-gray-200">
+          <h2 id="headings" class="mt-8 mb-3 text-xl sm:text-2xl text-white">
+    <span class="relative inline-block">
+      Headings
+      <span
+        class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span>
+    </span>
+</h2>
+<h1 id="heading-1" class=" mt-8 mb-3 text-2xl sm:text-3xl text-white">
+    <span class="relative inline-block">
+      Heading 1
+      <span
+        class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span>
+    </span>
+</h1>
+<h2 id="heading-2" class="mt-8 mb-3 text-xl sm:text-2xl text-white">
+    <span class="relative inline-block">
+      Heading 2
+      <span
+        class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span>
+    </span>
+</h2>
+<h3 id="heading-3" class="mt-6 mb-2 text-lg sm:text-xl text-white">
+    <span class="relative inline-block">
+      Heading 3
+      <span
+        class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span>
+    </span>
+</h3>
+<h4 id="heading-4" class="mt-5 mb-2 text-base sm:text-lg text-white">
+    <span class="relative inline-block">
+      Heading 4
+      <span
+        class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span>
+    </span>
+</h4>
+<h5 id="heading-5" class="mt-5 mb-2 text-base sm:text-lg text-white">
+    <span class="relative inline-block">
+      Heading 5
+      <span
+        class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span>
+    </span>
+</h5>
+<h6 id="heading-6" class="mt-5 mb-2 text-base sm:text-lg text-white">
+    <span class="relative inline-block">
+      Heading 6
+      <span
+        class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span>
+    </span>
+</h6>
+<hr>
+<h2 id="emphasis" class="mt-8 mb-3 text-xl sm:text-2xl text-white">
+    <span class="relative inline-block">
+      Emphasis
+      <span
+        class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span>
+    </span>
+</h2>
+<p>Regular text, <strong>bold text</strong>, <em>italic text</em>, <em><strong>bold and italic</strong></em>, <del>strikethrough</del>, and <code>inline code</code>.</p>
+<hr>
+<h2 id="table" class="mt-8 mb-3 text-xl sm:text-2xl text-white">
+    <span class="relative inline-block">
+      Table
+      <span
+        class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span>
+    </span>
+</h2>
+<div class="overflow-x-auto my-6 border border-neutral-800 rounded">
+  <table class="w-full border-collapse bg-neutral-950 text-gray-300 text-[0.95rem] min-w-full">
+    <thead class="bg-neutral-900 border-b-2 border-gray-200">
+        <tr>
+            <th class="px-4 py-3 font-semibold text-left text-gray-200 whitespace-nowrap">Language</th>
+            <th class="px-4 py-3 font-semibold text-left text-gray-200 whitespace-nowrap">Paradigm</th>
+            <th class="px-4 py-3 font-semibold text-left text-gray-200 whitespace-nowrap">Typing</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="border-b border-neutral-800 transition-colors hover:bg-neutral-900 last:border-b-0">
+            <td class="px-4 py-3 text-gray-400">Go</td>
+            <td class="px-4 py-3 text-gray-400">Compiled</td>
+            <td class="px-4 py-3 text-gray-400">Static</td>
+        </tr>
+        <tr class="border-b border-neutral-800 transition-colors hover:bg-neutral-900 last:border-b-0">
+            <td class="px-4 py-3 text-gray-400">Python</td>
+            <td class="px-4 py-3 text-gray-400">Interpreted</td>
+            <td class="px-4 py-3 text-gray-400">Dynamic</td>
+        </tr>
+        <tr class="border-b border-neutral-800 transition-colors hover:bg-neutral-900 last:border-b-0">
+            <td class="px-4 py-3 text-gray-400">Rust</td>
+            <td class="px-4 py-3 text-gray-400">Compiled</td>
+            <td class="px-4 py-3 text-gray-400">Static</td>
+        </tr>
+        <tr class="border-b border-neutral-800 transition-colors hover:bg-neutral-900 last:border-b-0">
+            <td class="px-4 py-3 text-gray-400">JavaScript</td>
+            <td class="px-4 py-3 text-gray-400">Interpreted</td>
+            <td class="px-4 py-3 text-gray-400">Dynamic</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+<hr>
+<h2 id="blockquotes" class="mt-8 mb-3 text-xl sm:text-2xl text-white">
+    <span class="relative inline-block">
+      Blockquotes
+      <span
+        class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span>
+    </span>
+</h2>
+
+
+
+
+
+
+
+
+
+
+<figure class="my-8">
+  <blockquote
+    class="relative rounded-xl border border-blue-500/20 bg-blue-950/25 px-5 py-4 text-gray-300 transition-shadow duration-200 hover:shadow-[0_0_0_1px_rgba(96,165,250,0.15)]">
+
+    <span class="absolute inset-y-3 left-0 w-0.5 rounded-full bg-blue-400/60"></span>
+    <span class="absolute right-4 top-2.5 select-none font-mono text-[0.6rem] tracking-widest text-white/10">///</span>
+
+    <div class="mb-3 flex items-center gap-2">
+      <span
+        class="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-400/15 font-mono text-[0.65rem] font-bold text-blue-400">i</span>
+      <span class="font-mono text-[0.68rem] font-bold uppercase tracking-widest text-blue-400/90">
+        — This is a standard note blockquote.
+      </span>
+    </div>
+
+    <div class="mb-3 h-px bg-gradient-to-r from-blue-400/15 to-transparent"></div>
+
+    <div
+      class="font-mono text-sm leading-relaxed [&_code]:rounded [&_code]:bg-white/5 [&_code]:px-1.5 [&_code]:py-0.5 [&_p]:mb-2 [&_p:last-child]:mb-0 [&_strong]:text-white">
+      
+    </div>
+  </blockquote>
+</figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure class="my-8">
+  <blockquote
+    class="relative rounded-xl border border-emerald-500/20 bg-emerald-950/25 px-5 py-4 text-gray-300 transition-shadow duration-200 hover:shadow-[0_0_0_1px_rgba(52,211,153,0.15)]">
+
+    <span class="absolute inset-y-3 left-0 w-0.5 rounded-full bg-emerald-400/60"></span>
+    <span class="absolute right-4 top-2.5 select-none font-mono text-[0.6rem] tracking-widest text-white/10">///</span>
+
+    <div class="mb-3 flex items-center gap-2">
+      <span
+        class="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-400/15 font-mono text-[0.65rem] font-bold text-emerald-400">↑</span>
+      <span class="font-mono text-[0.68rem] font-bold uppercase tracking-widest text-emerald-400/90">
+        — This is a tip.
+      </span>
+    </div>
+
+    <div class="mb-3 h-px bg-gradient-to-r from-emerald-400/15 to-transparent"></div>
+
+    <div
+      class="font-mono text-sm leading-relaxed [&_code]:rounded [&_code]:bg-white/5 [&_code]:px-1.5 [&_code]:py-0.5 [&_p]:mb-2 [&_p:last-child]:mb-0 [&_strong]:text-white">
+      
+    </div>
+  </blockquote>
+</figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure class="my-8">
+  <blockquote
+    class="relative rounded-xl border border-amber-500/20 bg-amber-950/20 px-5 py-4 text-gray-300 transition-shadow duration-200 hover:shadow-[0_0_0_1px_rgba(251,191,36,0.15)]">
+
+    <span class="absolute inset-y-3 left-0 w-0.5 rounded-full bg-amber-400/60"></span>
+    <span class="absolute right-4 top-2.5 select-none font-mono text-[0.6rem] tracking-widest text-white/10">///</span>
+
+    <div class="mb-3 flex items-center gap-2">
+      <span
+        class="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-amber-400/15 font-mono text-[0.6rem] font-bold text-amber-400">!</span>
+      <span class="font-mono text-[0.68rem] font-bold uppercase tracking-widest text-amber-400/90">
+        — This is a warning.
+      </span>
+    </div>
+
+    <div class="mb-3 h-px bg-gradient-to-r from-amber-400/15 to-transparent"></div>
+
+    <div
+      class="font-mono text-sm leading-relaxed [&_code]:rounded [&_code]:bg-white/5 [&_code]:px-1.5 [&_code]:py-0.5 [&_p]:mb-2 [&_p:last-child]:mb-0 [&_strong]:text-white">
+      
+    </div>
+  </blockquote>
+</figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure class="my-8">
+  <blockquote
+    class="relative rounded-xl border border-blue-500/20 bg-blue-950/25 px-5 py-4 text-gray-300 transition-shadow duration-200 hover:shadow-[0_0_0_1px_rgba(96,165,250,0.15)]">
+
+    <span class="absolute inset-y-3 left-0 w-0.5 rounded-full bg-blue-400/60"></span>
+    <span class="absolute right-4 top-2.5 select-none font-mono text-[0.6rem] tracking-widest text-white/10">///</span>
+
+    <div class="mb-3 flex items-center gap-2">
+      <span
+        class="inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-400/15 font-mono text-[0.65rem] font-bold text-blue-400">i</span>
+      <span class="font-mono text-[0.68rem] font-bold uppercase tracking-widest text-blue-400/90">
+        — This is an important blockquote.
+      </span>
+    </div>
+
+    <div class="mb-3 h-px bg-gradient-to-r from-blue-400/15 to-transparent"></div>
+
+    <div
+      class="font-mono text-sm leading-relaxed [&_code]:rounded [&_code]:bg-white/5 [&_code]:px-1.5 [&_code]:py-0.5 [&_p]:mb-2 [&_p:last-child]:mb-0 [&_strong]:text-white">
+      
+    </div>
+  </blockquote>
+</figure>
+
+
+
+
+
+<hr>
+<h2 id="horizontal-rule" class="mt-8 mb-3 text-xl sm:text-2xl text-white">
+    <span class="relative inline-block">
+      Horizontal Rule
+      <span
+        class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span>
+    </span>
+</h2>
+<p>Above the rule.</p>
+<hr>
+<p>Below the rule.</p>
+<hr>
+<h2 id="lists" class="mt-8 mb-3 text-xl sm:text-2xl text-white">
+    <span class="relative inline-block">
+      Lists
+      <span
+        class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"></span>
+    </span>
+</h2>
+<p><strong>Unordered:</strong></p>
+<ul>
+<li>Item one</li>
+<li>Item two
+<ul>
+<li>Nested item</li>
+<li>Another nested item</li>
+</ul>
+</li>
+<li>Item three</li>
+</ul>
+<p><strong>Ordered:</strong></p>
+<ol>
+<li>First step</li>
+<li>Second step
+<ol>
+<li>Sub-step A</li>
+<li>Sub-step B</li>
+</ol>
+</li>
+<li>Third step</li>
+</ol>
+<p><strong>Task list:</strong></p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> Set up Hugo</li>
+<li><input checked="" disabled="" type="checkbox"> Configure theme</li>
+<li><input disabled="" type="checkbox"> Write content</li>
+<li><input disabled="" type="checkbox"> Deploy to production</li>
+</ul>
+
+        </div>
+      </div>
+
+      
+    </article>
+
+    <div class="hidden lg:block col-span-2"></div>
+  </div>
+</main>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="border-t border-gray-800 bg-[#070709] text-gray-400">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-col md:flex-row items-center justify-between py-6 space-y-4 md:space-y-0">
+
+      
+      <div class="text-sm sm:text-base md:text-lg">
+        <span class="relative inline-block">
+          © 2026 Himanshu Sharma. All rights reserved. <br>
+          Made with <a href="https://gohugo.io" target="_blank">Hugo</a> | <a
+            href="https://github.com/Enerhim/enervoid-theme" target="_blank">Enervoid</a>
+        </span>
+      </div>
+
+      
+      <div class="flex items-center space-x-6 text-sm sm:text-base md:text-lg">
+
+        
+        <a href='https://github.com/Enerhim' target="_blank" rel="noopener"
+          class="group relative inline-block transition-colors duration-200 hover:text-gray-200">
+          
+          <i class="devicon-github-original"></i>
+          <span
+            class="absolute left-0 -bottom-1 h-[2px] w-0 bg-indigo-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        
+        <a href='https://twitter.com/HimEner' target="_blank" rel="noopener"
+          class="group relative inline-block transition-colors duration-200 hover:text-gray-200">
+          
+          <i class="devicon-twitter-original"></i>
+          <span
+            class="absolute left-0 -bottom-1 h-[2px] w-0 bg-indigo-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        
+        <a href='https://linkedin.in/enerhim' target="_blank" rel="noopener"
+          class="group relative inline-block transition-colors duration-200 hover:text-gray-200">
+          
+          <i class="devicon-linkedin-plain"></i>
+          <span
+            class="absolute left-0 -bottom-1 h-[2px] w-0 bg-indigo-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        
+        <a href='https://itch.io/profile/Enerhim' target="_blank" rel="noopener"
+          class="group relative inline-block transition-colors duration-200 hover:text-gray-200">
+          
+          <i class="fa-brands fa-itch-io"></i>
+          <span
+            class="absolute left-0 -bottom-1 h-[2px] w-0 bg-indigo-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        
+        <a href='https://gitlab.com/enerhim0' target="_blank" rel="noopener"
+          class="group relative inline-block transition-colors duration-200 hover:text-gray-200">
+          
+          <i class="fa-brands fa-gitlab"></i>
+          <span
+            class="absolute left-0 -bottom-1 h-[2px] w-0 bg-indigo-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  </footer>
+</body>
+
+</html>
