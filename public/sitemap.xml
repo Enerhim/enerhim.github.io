@@ -2,10 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/projects/enervoid-theme/</loc>
-    <lastmod>2026-02-18T16:20:00+05:30</lastmod>
+    <loc>http://localhost:1313/blog/</loc>
+    <lastmod>2026-02-19T23:45:20+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2026-02-19T23:45:20+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/info/</loc>
+    <lastmod>2026-02-19T23:45:20+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/tools/</loc>
+    <lastmod>2026-02-19T23:45:20+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-02-19T23:45:20+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/projects/enervoid-theme/</loc>
     <lastmod>2026-02-18T16:20:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/hugo/</loc>
@@ -13,15 +25,6 @@
   </url><url>
     <loc>http://localhost:1313/projects/</loc>
     <lastmod>2026-02-18T16:20:00+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2026-02-18T16:20:00+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/personal/personal/</loc>
-    <lastmod>2026-02-16T14:27:13+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/personal/</loc>
-    <lastmod>2026-02-16T14:27:13+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/arch/</loc>
     <lastmod>2026-02-12T16:20:00+05:30</lastmod>
@@ -66,6 +69,9 @@
     <lastmod>2024-09-28T16:30:22+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/multimedia/</loc>
+    <lastmod>2024-09-28T16:30:22+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/personal/</loc>
     <lastmod>2024-09-28T16:30:22+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/social-media/</loc>
@@ -147,8 +153,6 @@
     <lastmod>2021-02-24T16:20:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
-  </url><url>
-    <loc>http://localhost:1313/blog/</loc>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url>
