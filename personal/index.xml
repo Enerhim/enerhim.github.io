@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Personals on Himanshu Sharma</title><link>https://example.com/personal/</link><description>Recent content in Personals on Himanshu Sharma</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 28 Sep 2024 16:30:22 +0000</lastBuildDate><atom:link href="https://example.com/personal/index.xml" rel="self" type="application/rss+xml"/><item><title>Images &amp; Embeds</title><link>https://example.com/personal/embeds/</link><pubDate>Sat, 28 Sep 2024 16:30:22 +0000</pubDate><guid>https://example.com/personal/embeds/</guid><description>&lt;h2 id="images" class="mt-8 mb-3 text-xl sm:text-2xl text-white"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Personals on Himanshu Sharma</title><link>https://enerhim.github.io/personal/</link><description>Recent content in Personals on Himanshu Sharma</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 28 Sep 2024 16:30:22 +0000</lastBuildDate><atom:link href="https://enerhim.github.io/personal/index.xml" rel="self" type="application/rss+xml"/><item><title>Images &amp; Embeds</title><link>https://enerhim.github.io/personal/embeds/</link><pubDate>Sat, 28 Sep 2024 16:30:22 +0000</pubDate><guid>https://enerhim.github.io/personal/embeds/</guid><description>&lt;h2 id="images" class="mt-8 mb-3 text-xl sm:text-2xl text-white"&gt;
  &lt;span class="relative inline-block"&gt;
  Images
  &lt;span
@@ -30,8 +30,8 @@
  class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
  &lt;/span&gt;
 &lt;/h3&gt;
-&lt;p&gt;&lt;img class="mx-auto my-6 rounded-md border border-gray-800/70 bg-black/20" src="https://example.com/images/logo.png" loading="lazy" decoding="async"
- alt="Site logo"&gt;&lt;/p&gt;</description></item><item><title>Formatting</title><link>https://example.com/personal/formats/</link><pubDate>Fri, 10 May 2024 18:20:15 +0000</pubDate><guid>https://example.com/personal/formats/</guid><description>&lt;h2 id="headings" class="mt-8 mb-3 text-xl sm:text-2xl text-white"&gt;
+&lt;p&gt;&lt;img class="mx-auto my-6 rounded-md border border-gray-800/70 bg-black/20" src="https://enerhim.github.io/images/logo.png" loading="lazy" decoding="async"
+ alt="Site logo"&gt;&lt;/p&gt;</description></item><item><title>Formatting</title><link>https://enerhim.github.io/personal/formats/</link><pubDate>Fri, 10 May 2024 18:20:15 +0000</pubDate><guid>https://enerhim.github.io/personal/formats/</guid><description>&lt;h2 id="headings" class="mt-8 mb-3 text-xl sm:text-2xl text-white"&gt;
  &lt;span class="relative inline-block"&gt;
  Headings
  &lt;span
@@ -88,7 +88,7 @@
  class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
  &lt;/span&gt;
 &lt;/h2&gt;
-&lt;p&gt;Regular text, &lt;strong&gt;bold text&lt;/strong&gt;, &lt;em&gt;italic text&lt;/em&gt;, &lt;em&gt;&lt;strong&gt;bold and italic&lt;/strong&gt;&lt;/em&gt;, &lt;del&gt;strikethrough&lt;/del&gt;, and &lt;code&gt;inline code&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Code, Mermaid &amp; Diagrams</title><link>https://example.com/personal/code/</link><pubDate>Fri, 22 Mar 2024 14:45:30 +0000</pubDate><guid>https://example.com/personal/code/</guid><description>&lt;h2 id="syntax-highlighting" class="mt-8 mb-3 text-xl sm:text-2xl text-white"&gt;
+&lt;p&gt;Regular text, &lt;strong&gt;bold text&lt;/strong&gt;, &lt;em&gt;italic text&lt;/em&gt;, &lt;em&gt;&lt;strong&gt;bold and italic&lt;/strong&gt;&lt;/em&gt;, &lt;del&gt;strikethrough&lt;/del&gt;, and &lt;code&gt;inline code&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Code, Mermaid &amp; Diagrams</title><link>https://enerhim.github.io/personal/code/</link><pubDate>Fri, 22 Mar 2024 14:45:30 +0000</pubDate><guid>https://enerhim.github.io/personal/code/</guid><description>&lt;h2 id="syntax-highlighting" class="mt-8 mb-3 text-xl sm:text-2xl text-white"&gt;
  &lt;span class="relative inline-block"&gt;
  Syntax Highlighting
  &lt;span
@@ -477,7 +477,7 @@
 
  &lt;/svg&gt;
  
-&lt;/div&gt;</description></item><item><title>Math &amp; KaTeX</title><link>https://example.com/personal/math/</link><pubDate>Mon, 15 Jan 2024 09:30:00 +0000</pubDate><guid>https://example.com/personal/math/</guid><description>&lt;h2 id="inline-math" class="mt-8 mb-3 text-xl sm:text-2xl text-white"&gt;
+&lt;/div&gt;</description></item><item><title>Math &amp; KaTeX</title><link>https://enerhim.github.io/personal/math/</link><pubDate>Mon, 15 Jan 2024 09:30:00 +0000</pubDate><guid>https://enerhim.github.io/personal/math/</guid><description>&lt;h2 id="inline-math" class="mt-8 mb-3 text-xl sm:text-2xl text-white"&gt;
  &lt;span class="relative inline-block"&gt;
  Inline Math
  &lt;span
