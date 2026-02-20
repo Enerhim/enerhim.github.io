@@ -1,0 +1,58 @@
+baseURL = 'https://example.com'
+languageCode = 'en-us'
+title = "Himanshu Sharma"
+theme = "enervoid"
+
+[menus]
+  [[menus.main]]
+    name = 'Blog'
+    pageRef = '/blog'
+    weight = 10
+
+  # [[menus.main]]
+  #   name = 'Personal'
+  #   pageRef = '/personal'
+  #   weight = 20
+
+  [[menus.main]]
+    name = 'Projects'
+    pageRef = '/projects'
+    weight = 20
+
+[params]
+  avatar = "avatar.jpg"
+
+  [[params.socials]]
+      link = "https://github.com/Enerhim"
+      icon = "devicon-github-original"
+  [[params.socials]]
+      link = "https://twitter.com/HimEner"
+      icon = "devicon-twitter-original"
+   [[params.socials]]
+      link = "https://linkedin.in/enerhim"
+      icon = "devicon-linkedin-plain"
+   [[params.socials]]
+      link = "https://itch.io/profile/Enerhim"
+      icon = "fa-brands fa-itch-io" 
+   [[params.socials]]
+      link = "https://gitlab.com/enerhim0"
+      icon = "fa-brands fa-gitlab"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions.passthrough]
+      enable = true
+      [markup.goldmark.extensions.passthrough.delimiters]
+        block = [['$$','$$'], ['\\[','\\]']]
+        inline = [['$','$'], ['\\(','\\)']]
+
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+
+[markup.highlight]
+  noClasses = true
+  codeFences = true
+  guessSyntax = true
+  tabWidth = 4
+  style = "monokai"
