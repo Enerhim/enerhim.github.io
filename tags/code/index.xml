@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Code on Himanshu Sharma</title><link>https://example.com/tags/code/</link><description>Recent content in Code on Himanshu Sharma</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 22 Mar 2024 14:45:30 +0000</lastBuildDate><atom:link href="https://example.com/tags/code/index.xml" rel="self" type="application/rss+xml"/><item><title>Code, Mermaid &amp; Diagrams</title><link>https://example.com/blog/code/</link><pubDate>Fri, 22 Mar 2024 14:45:30 +0000</pubDate><guid>https://example.com/blog/code/</guid><description>&lt;h2 id="syntax-highlighting" class="mt-8 mb-3 text-xl sm:text-2xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Syntax Highlighting
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h2&gt;
+&lt;h3 id="go" class="mt-6 mb-2 text-lg sm:text-xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Go
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h3&gt;
+&lt;div class="my-7 rounded-sm border border-gray-800/80 bg-black/40 overflow-hidden"&gt;
+ &lt;div class="flex items-center justify-between px-4 py-2 border-b border-gray-800/70 bg-[#070709]"&gt;
+ &lt;span class="text-xs uppercase tracking-widest text-gray-500"&gt;go&lt;/span&gt;
+ &lt;span class="text-xs text-gray-600 font-mono"&gt;///&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;div class="codewrap overflow-x-auto"&gt;
+ &lt;div class="p-4"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-go" data-lang="go"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;package&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;main&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;func&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;fibonacci&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;n&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt;) &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;n&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;n&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;fibonacci&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;n&lt;/span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;) &lt;span style="color:#f92672"&gt;+&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;fibonacci&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;n&lt;/span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;func&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;main&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;i&lt;/span&gt; &lt;span style="color:#f92672"&gt;:=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;range&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;10&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;fmt&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;Printf&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;F(%d) = %d\n&amp;#34;&lt;/span&gt;, &lt;span style="color:#a6e22e"&gt;i&lt;/span&gt;, &lt;span style="color:#a6e22e"&gt;fibonacci&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;i&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+ .codewrap pre,
+ .codewrap .chroma { background: transparent !important; margin: 0 !important; }
+ .codewrap pre { padding: 0 !important; overflow: visible !important; }
+ .codewrap code { background: transparent !important; border: 0 !important; padding: 0 !important; font-size: 0.95rem; line-height: 1.55; color: rgba(229, 231, 235, 0.92); }
+ .codewrap { background: rgba(0,0,0,0.20); }
+&lt;/style&gt;&lt;h3 id="python" class="mt-6 mb-2 text-lg sm:text-xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Python
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h3&gt;
+&lt;div class="my-7 rounded-sm border border-gray-800/80 bg-black/40 overflow-hidden"&gt;
+ &lt;div class="flex items-center justify-between px-4 py-2 border-b border-gray-800/70 bg-[#070709]"&gt;
+ &lt;span class="text-xs uppercase tracking-widest text-gray-500"&gt;python&lt;/span&gt;
+ &lt;span class="text-xs text-gray-600 font-mono"&gt;///&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;div class="codewrap overflow-x-auto"&gt;
+ &lt;div class="p-4"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;quicksort&lt;/span&gt;(arr: list) &lt;span style="color:#f92672"&gt;-&amp;gt;&lt;/span&gt; list:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; len(arr) &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; arr
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pivot &lt;span style="color:#f92672"&gt;=&lt;/span&gt; arr[len(arr) &lt;span style="color:#f92672"&gt;//&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; left &lt;span style="color:#f92672"&gt;=&lt;/span&gt; [x &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; x &lt;span style="color:#f92672"&gt;in&lt;/span&gt; arr &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; x &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; pivot]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mid &lt;span style="color:#f92672"&gt;=&lt;/span&gt; [x &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; x &lt;span style="color:#f92672"&gt;in&lt;/span&gt; arr &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; x &lt;span style="color:#f92672"&gt;==&lt;/span&gt; pivot]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; right &lt;span style="color:#f92672"&gt;=&lt;/span&gt; [x &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; x &lt;span style="color:#f92672"&gt;in&lt;/span&gt; arr &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; x &lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt; pivot]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; quicksort(left) &lt;span style="color:#f92672"&gt;+&lt;/span&gt; mid &lt;span style="color:#f92672"&gt;+&lt;/span&gt; quicksort(right)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;print(quicksort([&lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;6&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;8&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;10&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;]))&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+ .codewrap pre,
+ .codewrap .chroma { background: transparent !important; margin: 0 !important; }
+ .codewrap pre { padding: 0 !important; overflow: visible !important; }
+ .codewrap code { background: transparent !important; border: 0 !important; padding: 0 !important; font-size: 0.95rem; line-height: 1.55; color: rgba(229, 231, 235, 0.92); }
+ .codewrap { background: rgba(0,0,0,0.20); }
+&lt;/style&gt;&lt;h3 id="shell" class="mt-6 mb-2 text-lg sm:text-xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Shell
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h3&gt;
+&lt;div class="my-7 rounded-sm border border-gray-800/80 bg-black/40 overflow-hidden"&gt;
+ &lt;div class="flex items-center justify-between px-4 py-2 border-b border-gray-800/70 bg-[#070709]"&gt;
+ &lt;span class="text-xs uppercase tracking-widest text-gray-500"&gt;bash&lt;/span&gt;
+ &lt;span class="text-xs text-gray-600 font-mono"&gt;///&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;div class="codewrap overflow-x-auto"&gt;
+ &lt;div class="p-4"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#!/usr/bin/env bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;set -euo pipefail
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; dir in */; &lt;span style="color:#66d9ef"&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; echo &lt;span style="color:#e6db74"&gt;&amp;#34;Processing: &lt;/span&gt;$dir&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; hugo build --source &lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;$dir&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt; --destination &lt;span style="color:#e6db74"&gt;&amp;#34;dist/&lt;/span&gt;&lt;span style="color:#e6db74"&gt;${&lt;/span&gt;dir%/&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;done&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+ .codewrap pre,
+ .codewrap .chroma { background: transparent !important; margin: 0 !important; }
+ .codewrap pre { padding: 0 !important; overflow: visible !important; }
+ .codewrap code { background: transparent !important; border: 0 !important; padding: 0 !important; font-size: 0.95rem; line-height: 1.55; color: rgba(229, 231, 235, 0.92); }
+ .codewrap { background: rgba(0,0,0,0.20); }
+&lt;/style&gt;&lt;hr&gt;
+&lt;h2 id="mermaid-diagrams" class="mt-8 mb-3 text-xl sm:text-2xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Mermaid Diagrams
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h2&gt;
+&lt;h3 id="flowchart" class="mt-6 mb-2 text-lg sm:text-xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Flowchart
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h3&gt;
+&lt;div class="my-7 flex justify-center"&gt;
+ &lt;div class="mermaid"&gt;flowchart TD
+ A([Start]) --&amp;gt; B[Read config]
+ B --&amp;gt; C{Valid?}
+ C -- Yes --&amp;gt; D[Build site]
+ C -- No --&amp;gt; E[Show error]
+ D --&amp;gt; F([Done])
+ E --&amp;gt; F&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="sequence-diagram" class="mt-6 mb-2 text-lg sm:text-xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Sequence Diagram
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h3&gt;
+&lt;div class="my-7 flex justify-center"&gt;
+ &lt;div class="mermaid"&gt;sequenceDiagram
+ participant Browser
+ participant Hugo
+ participant CDN
+
+ Browser-&amp;gt;&amp;gt;Hugo: GET /page
+ Hugo-&amp;gt;&amp;gt;Hugo: Render template
+ Hugo--&amp;gt;&amp;gt;Browser: HTML response
+ Browser-&amp;gt;&amp;gt;CDN: GET /styles.css
+ CDN--&amp;gt;&amp;gt;Browser: Cached asset&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="entity-relationship" class="mt-6 mb-2 text-lg sm:text-xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Entity Relationship
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h3&gt;
+&lt;div class="my-7 flex justify-center"&gt;
+ &lt;div class="mermaid"&gt;erDiagram
+ AUTHOR ||--o{ POST : writes
+ POST ||--|{ TAG : has
+ POST {
+ string title
+ date publishedAt
+ bool draft
+ }&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="goat-ascii-diagrams" class="mt-8 mb-3 text-xl sm:text-2xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ GoAT ASCII Diagrams
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h2&gt;
+&lt;div class="my-7 rounded-sm border border-gray-800/80 bg-black/40 overflow-hidden"&gt;
+ &lt;div class="flex items-center justify-between px-4 py-2 border-b border-gray-800/70 bg-[#070709]"&gt;
+ &lt;span class="text-xs uppercase tracking-widest text-gray-500"&gt;goat&lt;/span&gt;
+ &lt;span class="text-xs text-gray-600 font-mono"&gt;///&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;div class="codewrap overflow-x-auto"&gt;
+ &lt;div class="p-4"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ┌───────────┐
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; │ Client │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; └─────┬─────┘
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; │ HTTP
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ┌─────────▼──────────┐
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; │ Load Balancer │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; └──┬──────────────┬──┘
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; │ │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ┌───────▼───┐ ┌─────▼──────┐
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; │ Server A │ │ Server B │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; └───────────┘ └────────────┘&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+ .codewrap pre,
+ .codewrap .chroma { background: transparent !important; margin: 0 !important; }
+ .codewrap pre { padding: 0 !important; overflow: visible !important; }
+ .codewrap code { background: transparent !important; border: 0 !important; padding: 0 !important; font-size: 0.95rem; line-height: 1.55; color: rgba(229, 231, 235, 0.92); }
+ .codewrap { background: rgba(0,0,0,0.20); }
+&lt;/style&gt;&lt;div class="my-7 rounded-sm border border-gray-800/80 bg-black/40 overflow-hidden"&gt;
+ &lt;div class="flex items-center justify-between px-4 py-2 border-b border-gray-800/70 bg-[#070709]"&gt;
+ &lt;span class="text-xs uppercase tracking-widest text-gray-500"&gt;goat&lt;/span&gt;
+ &lt;span class="text-xs text-gray-600 font-mono"&gt;///&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;div class="codewrap overflow-x-auto"&gt;
+ &lt;div class="p-4"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 0 1 2 3
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; +-------+-------+-------+
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; | | | |
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; | A | B | C |
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; | | | |
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; +-------+-------+-------+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+ .codewrap pre,
+ .codewrap .chroma { background: transparent !important; margin: 0 !important; }
+ .codewrap pre { padding: 0 !important; overflow: visible !important; }
+ .codewrap code { background: transparent !important; border: 0 !important; padding: 0 !important; font-size: 0.95rem; line-height: 1.55; color: rgba(229, 231, 235, 0.92); }
+ .codewrap { background: rgba(0,0,0,0.20); }
+&lt;/style&gt;</description></item><item><title>Code, Mermaid &amp; Diagrams</title><link>https://example.com/personal/code/</link><pubDate>Fri, 22 Mar 2024 14:45:30 +0000</pubDate><guid>https://example.com/personal/code/</guid><description>&lt;h2 id="syntax-highlighting" class="mt-8 mb-3 text-xl sm:text-2xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Syntax Highlighting
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h2&gt;
+&lt;h3 id="go" class="mt-6 mb-2 text-lg sm:text-xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Go
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h3&gt;
+&lt;div class="my-7 rounded-sm border border-gray-800/80 bg-black/40 overflow-hidden"&gt;
+ &lt;div class="flex items-center justify-between px-4 py-2 border-b border-gray-800/70 bg-[#070709]"&gt;
+ &lt;span class="text-xs uppercase tracking-widest text-gray-500"&gt;go&lt;/span&gt;
+ &lt;span class="text-xs text-gray-600 font-mono"&gt;///&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;div class="codewrap overflow-x-auto"&gt;
+ &lt;div class="p-4"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-go" data-lang="go"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;package&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;main&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f92672"&gt;import&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;fmt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;func&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;fibonacci&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;n&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt;) &lt;span style="color:#66d9ef"&gt;int&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;n&lt;/span&gt; &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;n&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;fibonacci&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;n&lt;/span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;) &lt;span style="color:#f92672"&gt;+&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;fibonacci&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;n&lt;/span&gt;&lt;span style="color:#f92672"&gt;-&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;func&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;main&lt;/span&gt;() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;i&lt;/span&gt; &lt;span style="color:#f92672"&gt;:=&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;range&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;10&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;		&lt;span style="color:#a6e22e"&gt;fmt&lt;/span&gt;.&lt;span style="color:#a6e22e"&gt;Printf&lt;/span&gt;(&lt;span style="color:#e6db74"&gt;&amp;#34;F(%d) = %d\n&amp;#34;&lt;/span&gt;, &lt;span style="color:#a6e22e"&gt;i&lt;/span&gt;, &lt;span style="color:#a6e22e"&gt;fibonacci&lt;/span&gt;(&lt;span style="color:#a6e22e"&gt;i&lt;/span&gt;))
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+ .codewrap pre,
+ .codewrap .chroma { background: transparent !important; margin: 0 !important; }
+ .codewrap pre { padding: 0 !important; overflow: visible !important; }
+ .codewrap code { background: transparent !important; border: 0 !important; padding: 0 !important; font-size: 0.95rem; line-height: 1.55; color: rgba(229, 231, 235, 0.92); }
+ .codewrap { background: rgba(0,0,0,0.20); }
+&lt;/style&gt;&lt;h3 id="python" class="mt-6 mb-2 text-lg sm:text-xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Python
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h3&gt;
+&lt;div class="my-7 rounded-sm border border-gray-800/80 bg-black/40 overflow-hidden"&gt;
+ &lt;div class="flex items-center justify-between px-4 py-2 border-b border-gray-800/70 bg-[#070709]"&gt;
+ &lt;span class="text-xs uppercase tracking-widest text-gray-500"&gt;python&lt;/span&gt;
+ &lt;span class="text-xs text-gray-600 font-mono"&gt;///&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;div class="codewrap overflow-x-auto"&gt;
+ &lt;div class="p-4"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-python" data-lang="python"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;def&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;quicksort&lt;/span&gt;(arr: list) &lt;span style="color:#f92672"&gt;-&amp;gt;&lt;/span&gt; list:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; len(arr) &lt;span style="color:#f92672"&gt;&amp;lt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; arr
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pivot &lt;span style="color:#f92672"&gt;=&lt;/span&gt; arr[len(arr) &lt;span style="color:#f92672"&gt;//&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; left &lt;span style="color:#f92672"&gt;=&lt;/span&gt; [x &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; x &lt;span style="color:#f92672"&gt;in&lt;/span&gt; arr &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; x &lt;span style="color:#f92672"&gt;&amp;lt;&lt;/span&gt; pivot]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; mid &lt;span style="color:#f92672"&gt;=&lt;/span&gt; [x &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; x &lt;span style="color:#f92672"&gt;in&lt;/span&gt; arr &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; x &lt;span style="color:#f92672"&gt;==&lt;/span&gt; pivot]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; right &lt;span style="color:#f92672"&gt;=&lt;/span&gt; [x &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; x &lt;span style="color:#f92672"&gt;in&lt;/span&gt; arr &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; x &lt;span style="color:#f92672"&gt;&amp;gt;&lt;/span&gt; pivot]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; quicksort(left) &lt;span style="color:#f92672"&gt;+&lt;/span&gt; mid &lt;span style="color:#f92672"&gt;+&lt;/span&gt; quicksort(right)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;print(quicksort([&lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;6&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;8&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;10&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;]))&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+ .codewrap pre,
+ .codewrap .chroma { background: transparent !important; margin: 0 !important; }
+ .codewrap pre { padding: 0 !important; overflow: visible !important; }
+ .codewrap code { background: transparent !important; border: 0 !important; padding: 0 !important; font-size: 0.95rem; line-height: 1.55; color: rgba(229, 231, 235, 0.92); }
+ .codewrap { background: rgba(0,0,0,0.20); }
+&lt;/style&gt;&lt;h3 id="shell" class="mt-6 mb-2 text-lg sm:text-xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Shell
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h3&gt;
+&lt;div class="my-7 rounded-sm border border-gray-800/80 bg-black/40 overflow-hidden"&gt;
+ &lt;div class="flex items-center justify-between px-4 py-2 border-b border-gray-800/70 bg-[#070709]"&gt;
+ &lt;span class="text-xs uppercase tracking-widest text-gray-500"&gt;bash&lt;/span&gt;
+ &lt;span class="text-xs text-gray-600 font-mono"&gt;///&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;div class="codewrap overflow-x-auto"&gt;
+ &lt;div class="p-4"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#!/usr/bin/env bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;set -euo pipefail
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; dir in */; &lt;span style="color:#66d9ef"&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; echo &lt;span style="color:#e6db74"&gt;&amp;#34;Processing: &lt;/span&gt;$dir&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; hugo build --source &lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;$dir&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt; --destination &lt;span style="color:#e6db74"&gt;&amp;#34;dist/&lt;/span&gt;&lt;span style="color:#e6db74"&gt;${&lt;/span&gt;dir%/&lt;span style="color:#e6db74"&gt;}&lt;/span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;done&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+ .codewrap pre,
+ .codewrap .chroma { background: transparent !important; margin: 0 !important; }
+ .codewrap pre { padding: 0 !important; overflow: visible !important; }
+ .codewrap code { background: transparent !important; border: 0 !important; padding: 0 !important; font-size: 0.95rem; line-height: 1.55; color: rgba(229, 231, 235, 0.92); }
+ .codewrap { background: rgba(0,0,0,0.20); }
+&lt;/style&gt;&lt;hr&gt;
+&lt;h2 id="mermaid-diagrams" class="mt-8 mb-3 text-xl sm:text-2xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Mermaid Diagrams
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h2&gt;
+&lt;h3 id="flowchart" class="mt-6 mb-2 text-lg sm:text-xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Flowchart
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h3&gt;
+&lt;div class="my-7 flex justify-center"&gt;
+ &lt;div class="mermaid"&gt;flowchart TD
+ A([Start]) --&amp;gt; B[Read config]
+ B --&amp;gt; C{Valid?}
+ C -- Yes --&amp;gt; D[Build site]
+ C -- No --&amp;gt; E[Show error]
+ D --&amp;gt; F([Done])
+ E --&amp;gt; F&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="sequence-diagram" class="mt-6 mb-2 text-lg sm:text-xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Sequence Diagram
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h3&gt;
+&lt;div class="my-7 flex justify-center"&gt;
+ &lt;div class="mermaid"&gt;sequenceDiagram
+ participant Browser
+ participant Hugo
+ participant CDN
+
+ Browser-&amp;gt;&amp;gt;Hugo: GET /page
+ Hugo-&amp;gt;&amp;gt;Hugo: Render template
+ Hugo--&amp;gt;&amp;gt;Browser: HTML response
+ Browser-&amp;gt;&amp;gt;CDN: GET /styles.css
+ CDN--&amp;gt;&amp;gt;Browser: Cached asset&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id="entity-relationship" class="mt-6 mb-2 text-lg sm:text-xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Entity Relationship
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h3&gt;
+&lt;div class="my-7 flex justify-center"&gt;
+ &lt;div class="mermaid"&gt;erDiagram
+ AUTHOR ||--o{ POST : writes
+ POST ||--|{ TAG : has
+ POST {
+ string title
+ date publishedAt
+ bool draft
+ }&lt;/div&gt;
+&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id="goat-ascii-diagrams" class="mt-8 mb-3 text-xl sm:text-2xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ GoAT ASCII Diagrams
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h2&gt;
+&lt;div class="my-7 rounded-sm border border-gray-800/80 bg-black/40 overflow-hidden"&gt;
+ &lt;div class="flex items-center justify-between px-4 py-2 border-b border-gray-800/70 bg-[#070709]"&gt;
+ &lt;span class="text-xs uppercase tracking-widest text-gray-500"&gt;goat&lt;/span&gt;
+ &lt;span class="text-xs text-gray-600 font-mono"&gt;///&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;div class="codewrap overflow-x-auto"&gt;
+ &lt;div class="p-4"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ┌───────────┐
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; │ Client │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; └─────┬─────┘
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; │ HTTP
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ┌─────────▼──────────┐
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; │ Load Balancer │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; └──┬──────────────┬──┘
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; │ │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; ┌───────▼───┐ ┌─────▼──────┐
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; │ Server A │ │ Server B │
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; └───────────┘ └────────────┘&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+ .codewrap pre,
+ .codewrap .chroma { background: transparent !important; margin: 0 !important; }
+ .codewrap pre { padding: 0 !important; overflow: visible !important; }
+ .codewrap code { background: transparent !important; border: 0 !important; padding: 0 !important; font-size: 0.95rem; line-height: 1.55; color: rgba(229, 231, 235, 0.92); }
+ .codewrap { background: rgba(0,0,0,0.20); }
+&lt;/style&gt;&lt;div class="my-7 rounded-sm border border-gray-800/80 bg-black/40 overflow-hidden"&gt;
+ &lt;div class="flex items-center justify-between px-4 py-2 border-b border-gray-800/70 bg-[#070709]"&gt;
+ &lt;span class="text-xs uppercase tracking-widest text-gray-500"&gt;goat&lt;/span&gt;
+ &lt;span class="text-xs text-gray-600 font-mono"&gt;///&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;div class="codewrap overflow-x-auto"&gt;
+ &lt;div class="p-4"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-fallback" data-lang="fallback"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; 0 1 2 3
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; +-------+-------+-------+
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; | | | |
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; | A | B | C |
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; | | | |
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; +-------+-------+-------+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+ .codewrap pre,
+ .codewrap .chroma { background: transparent !important; margin: 0 !important; }
+ .codewrap pre { padding: 0 !important; overflow: visible !important; }
+ .codewrap code { background: transparent !important; border: 0 !important; padding: 0 !important; font-size: 0.95rem; line-height: 1.55; color: rgba(229, 231, 235, 0.92); }
+ .codewrap { background: rgba(0,0,0,0.20); }
+&lt;/style&gt;</description></item></channel></rss>

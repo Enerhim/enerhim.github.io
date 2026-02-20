@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Interactive on Himanshu Sharma</title><link>https://example.com/tags/interactive/</link><description>Recent content in Interactive on Himanshu Sharma</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 28 Sep 2024 16:30:22 +0000</lastBuildDate><atom:link href="https://example.com/tags/interactive/index.xml" rel="self" type="application/rss+xml"/><item><title>Images &amp; Embeds</title><link>https://example.com/blog/embeds/</link><pubDate>Sat, 28 Sep 2024 16:30:22 +0000</pubDate><guid>https://example.com/blog/embeds/</guid><description>&lt;h2 id="images" class="mt-8 mb-3 text-xl sm:text-2xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Images
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h2&gt;
+&lt;h3 id="standard-image-markdown" class="mt-6 mb-2 text-lg sm:text-xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Standard Image (Markdown)
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;img class="mx-auto my-6 rounded-md border border-gray-800/70 bg-black/20" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900" loading="lazy" decoding="async"
+ alt="A scenic mountain landscape"&gt;&lt;/p&gt;
+&lt;h3 id="image-with-title" class="mt-6 mb-2 text-lg sm:text-xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Image with Title
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;img class="mx-auto my-6 rounded-md border border-gray-800/70 bg-black/20" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900" loading="lazy" decoding="async"
+ alt="Abstract architecture"&gt;&lt;/p&gt;
+&lt;h3 id="local-image" class="mt-6 mb-2 text-lg sm:text-xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Local Image
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;img class="mx-auto my-6 rounded-md border border-gray-800/70 bg-black/20" src="https://example.com/images/logo.png" loading="lazy" decoding="async"
+ alt="Site logo"&gt;&lt;/p&gt;</description></item><item><title>Images &amp; Embeds</title><link>https://example.com/personal/embeds/</link><pubDate>Sat, 28 Sep 2024 16:30:22 +0000</pubDate><guid>https://example.com/personal/embeds/</guid><description>&lt;h2 id="images" class="mt-8 mb-3 text-xl sm:text-2xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Images
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h2&gt;
+&lt;h3 id="standard-image-markdown" class="mt-6 mb-2 text-lg sm:text-xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Standard Image (Markdown)
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;img class="mx-auto my-6 rounded-md border border-gray-800/70 bg-black/20" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900" loading="lazy" decoding="async"
+ alt="A scenic mountain landscape"&gt;&lt;/p&gt;
+&lt;h3 id="image-with-title" class="mt-6 mb-2 text-lg sm:text-xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Image with Title
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;img class="mx-auto my-6 rounded-md border border-gray-800/70 bg-black/20" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=900" loading="lazy" decoding="async"
+ alt="Abstract architecture"&gt;&lt;/p&gt;
+&lt;h3 id="local-image" class="mt-6 mb-2 text-lg sm:text-xl text-white"&gt;
+ &lt;span class="relative inline-block"&gt;
+ Local Image
+ &lt;span
+ class="absolute left-0 -bottom-1 h-px w-0 bg-indigo-400"&gt;&lt;/span&gt;
+ &lt;/span&gt;
+&lt;/h3&gt;
+&lt;p&gt;&lt;img class="mx-auto my-6 rounded-md border border-gray-800/70 bg-black/20" src="https://example.com/images/logo.png" loading="lazy" decoding="async"
+ alt="Site logo"&gt;&lt;/p&gt;</description></item></channel></rss>
